@@ -38,6 +38,24 @@ public class HomeController {
 	}
 	
 	/**
+	 * BLOG 페이지 파일 경로
+	 */
+	@RequestMapping(value = "/blog", method = RequestMethod.GET)
+	public String blog(Locale locale, Model model) {
+		
+		return "blog";
+	}
+	
+	/**
+	 * CONTACTUS 페이지 파일 경로
+	 */
+	@RequestMapping(value = "/contactus", method = RequestMethod.GET)
+	public String contactus(Locale locale, Model model) {
+		
+		return "contactus";
+	}
+	
+	/**
 	 * html5 테스트용 파일 입니다.
 	 */
 	@RequestMapping(value = "/htmltest", method = RequestMethod.GET)

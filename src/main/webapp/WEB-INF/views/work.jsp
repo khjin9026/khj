@@ -16,39 +16,79 @@
 <link rel="stylesheet" type="text/css" href="/resources/css/common.css">
 <style>
 /* WORK영역 CSS */
-.work-section{
-margin-top:73px;
-}
-.work-section .sec-tit{
-width:90%;
-max-width:1132px;
-margin:0 auto;
-margin-bottom:47px;
-text-align:center;
-}
-.work-section .work-list li{
-width:100%;
-}
-.work-section .work-list li a{
-display:block;
-position:relative;
-width:100%;
-height:100%;
-}
-.work-section .work-list li a:before{
-display:block;
-position:absolute;
-top:0;
-left:0;
-z-index:10;
-width:100%;
-height:100%;
-background:#3f51b5;
-content:"";
-opacity:0;
-transiton:all 0.2s;
+.work-section {
+	margin-top: 73px;
 }
 
+.work-section .sec-tit {
+	width: 90%;
+	max-width: 1132px;
+	margin: 0 auto;
+	margin-bottom: 47px;
+	text-align: center;
+}
+
+.work-section .work-list li {
+	width: 100%;
+}
+
+.work-section .work-list li a {
+	display: block;
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+
+.work-section .work-list li a:before {
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 10;
+	width: 100%;
+	height: 100%;
+	background: #3f51b5;
+	content: "";
+	opacity: 0;
+	transiton: all 0.2s;
+}
+
+.work-section .work-list li a:hover:before {
+	opacity: 0.5;
+}
+
+.work-section .work-list li .info {
+	position: absolute;
+	top: 0;
+	left: 23px;
+	z-index: 20;
+	opacity: 0;
+	transition: all 0.3s;
+}
+
+.work-section .work-list li a:hover .info {
+	transform: translateY(23px);
+	opacity: 1;
+}
+
+.work-section .work-list li .info h3 {
+	margin-bottom: 8px;
+	font-size: 23px;
+	color: #fff;
+	font-weight: normal;
+}
+
+.work-section .work-list li .info span {
+	font-size: 11px;
+	color: #fff;
+}
+
+.work-section .work-list li img {
+	display: block;
+	width: 100%;
+	max-width: 100%;
+	height: auto;
+}
 </style>
 
 <script src="/resources/js/jquery.min.js"></script>
