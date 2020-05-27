@@ -47,6 +47,26 @@ color:#424242;
 font-weight:normal;
 line-height:1.6;
 }
+/* 태블릿 blog 영역 css */
+@media all and (min-width:768px){
+ .blog-section{
+  margin-top:124px;
+  }
+  .blog-section .sec-tit{
+  margin-bottom:76px;
+  }
+.blog-section .blog-list li{
+  float:left;
+  width:31.59722222222222%;
+  /* 242.6666666666667px ÷ 768px*/
+  margin-left:2.604166666666667%;
+  /* 20px ÷ 768px*/
+  margin-top:0;
+  }
+.blog-section .blog-list li:first-child{
+margin-left:0;
+}
+}
 </style>
 
 <script src="/resources/js/jquery.min.js"></script>
@@ -79,16 +99,16 @@ line-height:1.6;
 			<div class="container">
 				<h2 class="sec-tit">BLOG</h2>
 				<ul class="blog-list">
-					<li><a href="#"> <img src="/resources/images/summer.jpg"
+					<li><a href="#" onclick="return false"> <img src="/resources/images/summer.jpg"
 							alt=""></a> <time datetime="2020-05-26">MAY 5, 2020</time> <a
 						href=""><h3>타임스페이스는 사용자 중심의 웹페이지 제작 회사입니다
 						<br>안녕하세요 감사해요 잘있어요 다시만나요 아침해가 뜨면 매일같은 사람들과 또 다시 새로운 하루 일을 시작해
 						<br>안녕하세요 감사해요 잘있어요 다시만나요
 						</h3> </a></li>
-					<li><a href="#"> <img src="/resources/images/summer.jpg"
+					<li><a href="#" onclick="return false"> <img src="/resources/images/summer.jpg"
 							alt=""></a> <time datetime="2020-05-26">MAY 5, 2020</time> <a
 						href=""><h3>타임스페이스는 사용자 중심의 웹페이지 제작 회사입니다</h3> </a></li>
-					<li><a href="#"> <img src="/resources/images/summer.jpg"
+					<li><a href="#" onclick="return false"> <img src="/resources/images/summer.jpg"
 							alt=""></a> <time datetime="2020-05-26">MAY 5, 2020</time> <a
 						href=""><h3>타임스페이스는 사용자 중심의 웹페이지 제작 회사입니다</h3> </a></li>
 				</ul>

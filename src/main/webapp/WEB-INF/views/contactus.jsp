@@ -66,6 +66,33 @@ background:#3f51b5;
 font-family:"궁서";
 cursor:pointer;
 }
+/* 태블릿 contact us 영역 css */
+@media all and (min-width:768px){
+.contact-section{
+margin-top:176px;
+}
+.contact-section .sec-tit{
+margin-bottom:76px;
+}
+.contact-section .form-box .form, .contact-section .form-box .textarea{
+float:left;
+width:48.6979166666666667%;
+/* 374px ÷ 768px */
+}
+contact-section .form-box .form{
+margin-right:2.604166666666667%;
+/* 20px ÷ 768px */
+}
+.contact-section .form-box .form input:last-child{
+margin-bottom:0;
+}
+/ *태블릿 푸터 영역 css */
+.footer iframe{
+height:432px;
+}
+.footer p{
+margin:34px 0;}
+}
 </style>
 
 <script src="/resources/js/jquery.min.js"></script>

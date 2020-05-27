@@ -89,6 +89,25 @@
 	max-width: 100%;
 	height: auto;
 }
+/* 태블릿 work 영역 css */
+@media all and (min-width:768px){
+.work-section{
+margin-top:118px;
+}
+.work-section .sec-tit{
+margin-bottom:76px;
+}
+.work-section .work-list li{
+float:left;
+width:50%;
+}
+.work-section .work-list li. info{
+left:37px;
+}
+.work-section .work-list li a:hover .info{
+transform:translateY(70px);
+}
+}
 </style>
 
 <script src="/resources/js/jquery.min.js"></script>
@@ -121,49 +140,49 @@
 		<section class="work-section cfixed">
 			<h2 class="sec-tit">WORK</h2>
 			<ul class="work-list">
-				<li><a href="#">
+				<li><a href="#" onclick="return false">
 						<div class="info">
 							<h3>작업1</h3>
 							<span>소스/작업1</span>
 						</div> <img src="/resources/images/summer.jpg" alt="">
 				</a>
-				<li><a href="#">
+				<li><a href="#" onclick="return false">
 						<div class="info">
 							<h3>작업2</h3>
 							<span>소스/작업2</span>
 						</div> <img src="/resources/images/summer.jpg" alt="">
 				</a>
-				<li><a href="#">
+				<li><a href="#" onclick="return false">
 						<div class="info">
 							<h3>작업3</h3>
 							<span>소스/작업3</span>
 						</div> <img src="/resources/images/summer.jpg" alt="">
 				</a>
-				<li><a href="#">
+				<li><a href="#" onclick="return false">
 						<div class="info">
 							<h3>작업4</h3>
 							<span>소스/작업4</span>
 						</div> <img src="/resources/images/summer.jpg" alt="">
 				</a>
-				<li><a href="#">
+				<li><a href="#" onclick="return false">
 						<div class="info">
 							<h3>작업5</h3>
 							<span>소스/작업5</span>
 						</div> <img src="/resources/images/summer.jpg" alt="">
 				</a>
-				<li><a href="#">
+				<li><a href="#" onclick="return false">
 						<div class="info">
 							<h3>작업6</h3>
 							<span>소스/작업6</span>
 						</div> <img src="/resources/images/summer.jpg" alt="">
 				</a>
-				<li><a href="#">
+				<li><a href="#" onclick="return false">
 						<div class="info">
 							<h3>작업7</h3>
 							<span>소스/작업7</span>
 						</div> <img src="/resources/images/summer.jpg" alt="">
 				</a>
-				<li><a href="#">
+				<li><a href="#" onclick="return false">
 						<div class="info">
 							<h3>작업8</h3>
 							<span>소스/작업8</span>
