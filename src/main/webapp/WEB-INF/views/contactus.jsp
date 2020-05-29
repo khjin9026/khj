@@ -16,82 +16,107 @@
 <link rel="stylesheet" type="text/css" href="/resources/css/common.css">
 <style>
 /* contact us 영역 CSS */
-.contact-section{
-margin-top:50px;
+.contact-section {
+	margin-top: 50px;
 }
-.contact-section .sec-tit{
-margin-bottom:47px;
-text-align:center;
+
+.contact-section .sec-tit {
+	margin-bottom: 47px;
+	text-align: center;
 }
-.contact-section .form-box .form input{
-width:100%;
-background: transparent;
-line-height: 1.2;
-padding: 0 2px;
-height: 50px;
-outline: none;
-border: none;
-border-bottom: 2px solid #dbdbdb;
+
+.contact-section .form-box .form input {
+	width: 100%;
+	background: transparent;
+	line-height: 1.2;
+	padding: 0 2px;
+	height: 50px;
+	outline: none;
+	border: none;
+	border-bottom: 2px solid #dbdbdb;
 }
-.blind{ /* 라벨 태그 숨기기 */
-position:absolute;
-width:0;
-height:0;
-line-height:0;
-text-indent:-9999px;
-overflow:hidden;
+
+.blind { /* 라벨 태그 숨기기 */
+	position: absolute;
+	width: 0;
+	height: 0;
+	line-height: 0;
+	text-indent: -9999px;
+	overflow: hidden;
 }
-.contact-section .form-box .textarea textarea{
-width:100%;
-background:transparent;
-line-height: 1.2;
-outline:none;
-border: none;
-border-bottom: 2px solid #dbdbdb;
-min-height:150px;
-padding-top:13px;
-padding-bottom:13px;
+
+.contact-section .form-box .textarea textarea {
+	width: 100%;
+	background: transparent;
+	line-height: 1.2;
+	outline: none;
+	border: none;
+	border-bottom: 2px solid #dbdbdb;
+	min-height: 150px;
+	padding-top: 13px;
+	padding-bottom: 13px;
 }
-.contact-section .form-box .send-btn{
-margin-top:36px;
-text-align:right;
+
+.contact-section .form-box .send-btn {
+	margin-top: 36px;
+	text-align: right;
 }
-.contact-section .form-box .send-btn button{
-padding:15px;
-margin:0;
-border:0;
-font-size:12px;
-color:#fff;
-background:#3f51b5;
-font-family:"궁서";
-cursor:pointer;
+
+.contact-section .form-box .send-btn button {
+	padding: 15px;
+	margin: 0;
+	border: 0;
+	font-size: 12px;
+	color: #fff;
+	background: #3f51b5;
+	font-family: "궁서";
+	cursor: pointer;
 }
 /* 태블릿 contact us 영역 css */
-@media all and (min-width:768px){
-.contact-section{
-margin-top:176px;
+@media all and (min-width:768px) {
+	.contact-section {
+		margin-top: 176px;
+	}
+	.contact-section .sec-tit {
+		margin-bottom: 76px;
+	}
+	.contact-section .form-box .form, .contact-section .form-box .textarea {
+		float: left;
+		width: 48.6979166666666667%;
+		/* 374px ÷ 768px */
+	}
+	contact-section .form-box .form {
+		margin-right: 2.604166666666667%;
+		/* 20px ÷ 768px */
+	}
+	.contact-section .form-box .form input:last-child {
+		margin-bottom: 0;
+	}
+	
+	/* 태블릿 푸터 영역 css */
+.footer iframe {
+		height: 432px;
+	}
+	.footer p {
+		margin: 34px 0;
+	}
 }
-.contact-section .sec-tit{
-margin-bottom:76px;
-}
-.contact-section .form-box .form, .contact-section .form-box .textarea{
-float:left;
-width:48.6979166666666667%;
-/* 374px ÷ 768px */
-}
-contact-section .form-box .form{
-margin-right:2.604166666666667%;
-/* 20px ÷ 768px */
-}
-.contact-section .form-box .form input:last-child{
-margin-bottom:0;
-}
-/ *태블릿 푸터 영역 css */
-.footer iframe{
-height:432px;
-}
-.footer p{
-margin:34px 0;}
+/* pc contact us 영역 css */
+@media all and (min-width:1132px) {
+	.contact-section .sec-tit {
+		float: left;
+		margin-bottom: 0;
+	}
+	.contact-section .form-box {
+		float: right;
+		width: 74.5583038869258%;
+	}
+	.contact-section .form-box .form, .contact-section .form-box .textarea {
+		width: 48.81516587677725%;
+	}
+	.contact-section .form-box .form {
+		margin-right: 2.369668246445498%;
+	}
 }
 </style>
 
@@ -129,11 +154,10 @@ margin:34px 0;}
 						<fieldset class="cfixed">
 							<legend class="blind">CONTACT US</legend>
 							<div class="form">
-								<label for="name" class="blind">name</label>
-								<input type="text" id="name" placeholder="Name">
-								<label for="phone" class="blind">phone</label>
-								<input type="tel" id="phone" placeholder="Phone">
-								<label for="email" class="blind">email</label>
+								<label for="name" class="blind">name</label> <input type="text"
+									id="name" placeholder="Name"> <label for="phone"
+									class="blind">phone</label> <input type="tel" id="phone"
+									placeholder="Phone"> <label for="email" class="blind">email</label>
 								<input type="email" id="email" placeholder="Email Address">
 							</div>
 							<div class="textarea">
@@ -149,7 +173,10 @@ margin:34px 0;}
 			</div>
 		</section>
 		<footer class="footer">
-		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3315.0085753561034!2d-117.92116288461065!3d33.81209178067199!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80dcd7d12b3b5e6b%3A0x2ef62f8418225cfa!2z65SU7KaI64uI656c65OcIO2MjO2BrA!5e0!3m2!1sko!2skr!4v1590481384002!5m2!1sko!2skr" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+			<iframe
+				src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3315.0085753561034!2d-117.92116288461065!3d33.81209178067199!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80dcd7d12b3b5e6b%3A0x2ef62f8418225cfa!2z65SU7KaI64uI656c65OcIO2MjO2BrA!5e0!3m2!1sko!2skr!4v1590481384002!5m2!1sko!2skr"
+				width="600" height="450" frameborder="0" style="border: 0;"
+				allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
 			<p class="copyright">LOGO</p>
 		</footer>
 	</div>

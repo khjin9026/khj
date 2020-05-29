@@ -14,25 +14,32 @@
 	href="/images/favicon/home-touch-icon.png">
 <link rel="stylesheet" type="text/css" href="/resources/css/reset.css">
 <link rel="stylesheet" type="text/css" href="/resources/css/common.css">
+<link rel="stylesheet" type="text/css" href="/resources/css/user.css">
 <style>
-/* HOME 슬라이더 영역 CSS */
-.slider img {
-display:block;
-width:100%;
-max-width:100%;
-height:auto;
+.go_top {
+position: fixed;
+padding:20px;
+opacity:0.8;
+right: 20px;
+bottom:112px;
+text-align:center;
+background:blue;
+z-index:100;
+color:white !important;
 }
 </style>
 
 <script src="/resources/js/jquery.min.js"></script>
 <script src="/resources/js/common.js"></script>
+
 <!-- 사용자 스크립트 -->
 <script>
-
+	
 </script>
 </head>
 <body>
-<!-- 더미 데이터:CSS작업전 내용 -->
+	<!-- 더미 데이터:CSS작업전 내용 -->
+	<!-- 공통 상단메뉴 -->
 	<div id="wrap">
 		<header class="header cfixed">
 			<h1 class="logo">
@@ -41,21 +48,169 @@ height:auto;
 			<nav>
 				<ul class="gnb">
 					<li><a href="/">HOME</a></li>
-					<li><a href="/weare">WE ARE</a></li>
-					<li><a href="/work">WORK</a></li>
-					<li><a href="/blog">BLOG</a></li>
-					<li><a href="contactus">CONTACT US</a></li>
+					<li><a href="#weare">WE ARE</a></li>
+					<li><a href="#work">WORK</a></li>
+					<li><a href="#blog">BLOG</a></li>
+					<li><a href="#contactus">CONTACT US</a></li>
 				</ul>
 			</nav>
 			<span class="menu-toggle-btn"> <span></span> <span></span> <span></span>
 			</span>
 		</header>
+		
+		<!-- HOME 더미 -->
 		<article class="slider">
 			<img src="/resources/images/summer.jpg" alt="">
 		</article>
+		
+		<!-- WE ARE 더미 -->
+		<section class="content">
+			<section class="display-section">
+				<div class="container">
+					<h2 class="sec-tit" id="weare">WE ARE</h2>
+					<p class="desc">
+						"휴먼 교육센터 디지털 컨버전스 과정 입니다." <br> "그리고, 지금은 화면 설계 시간 입니다."
+					</p>
+				</div>
+			</section>
+			<section class="promotion-section">
+				<div class="container">
+					<ul class="promo-list">
+						<li><a href="#" onclick="return false"> <img
+								src="/resources/images/summer.jpg" alt="">
+								<h3>HOME</h3>
+								<p>미안하다 이거 보여주려고 어그로 끌었다.</a></li>
+						<li><a href="#" onclick="return false"> <img
+								src="/resources/images/summer.jpg" alt="">
+								<h3>WE ARE</h3>
+								<p>미안하다 이거 보여주려고 어그로 끌었다.</p>
+						</a></li>
+						<li><a href="#" onclick="return false"> <img
+								src="/resources/images/summer.jpg" alt="">
+								<h3>WORK</h3>
+								<p>미안하다 이거 보여주려고 어그로 끌었다.</p>
+						</a></li>
+						<li><a href="#" onclick="return false"> <img
+								src="/resources/images/summer.jpg" alt="">
+								<h3>BLOG</h3>
+								<p>미안하다 이거 보여주려고 어그로 끌었다.</p>
+						</a></li>
+					</ul>
+				</div>
+			</section>
+		</section>
+		
+		<!-- WORK 더미 -->
+		<section class="work-section cfixed">
+			<h2 class="sec-tit" id="work">WORK</h2>
+			<ul class="work-list">
+				<li><a href="#" onclick="return false">
+						<div class="info">
+							<h3>작업1</h3>
+							<span>소스/작업1</span>
+						</div> <img src="/resources/images/summer.jpg" alt="">
+				</a>
+				<li><a href="#" onclick="return false">
+						<div class="info">
+							<h3>작업2</h3>
+							<span>소스/작업2</span>
+						</div> <img src="/resources/images/summer.jpg" alt="">
+				</a>
+				<li><a href="#" onclick="return false">
+						<div class="info">
+							<h3>작업3</h3>
+							<span>소스/작업3</span>
+						</div> <img src="/resources/images/summer.jpg" alt="">
+				</a>
+				<li><a href="#" onclick="return false">
+						<div class="info">
+							<h3>작업4</h3>
+							<span>소스/작업4</span>
+						</div> <img src="/resources/images/summer.jpg" alt="">
+				</a>
+				<li><a href="#" onclick="return false">
+						<div class="info">
+							<h3>작업5</h3>
+							<span>소스/작업5</span>
+						</div> <img src="/resources/images/summer.jpg" alt="">
+				</a>
+				<li><a href="#" onclick="return false">
+						<div class="info">
+							<h3>작업6</h3>
+							<span>소스/작업6</span>
+						</div> <img src="/resources/images/summer.jpg" alt="">
+				</a>
+				<li><a href="#" onclick="return false">
+						<div class="info">
+							<h3>작업7</h3>
+							<span>소스/작업7</span>
+						</div> <img src="/resources/images/summer.jpg" alt="">
+				</a>
+				<li><a href="#" onclick="return false">
+						<div class="info">
+							<h3>작업8</h3>
+							<span>소스/작업8</span>
+						</div> <img src="/resources/images/summer.jpg" alt="">
+				</a>
+			</ul>
+		</section>
+		
+		<!-- BLOG 더미 -->
+		<section class="blog-section">
+			<div class="container">
+				<h2 class="sec-tit" id="blog">BLOG</h2>
+				<ul class="blog-list">
+					<li><a href="#" onclick="return false"> <img
+							src="/resources/images/summer.jpg" alt=""></a> <time
+							datetime="2020-05-26">MAY 5, 2020</time> <a href=""><h3>
+								타임스페이스는 사용자 중심의 웹페이지 제작 회사입니다 <br>안녕하세요 감사해요 잘있어요 다시만나요
+								아침해가 뜨면 매일같은 사람들과 또 다시 새로운 하루 일을 시작해 <br>안녕하세요 감사해요 잘있어요
+								다시만나요
+							</h3> </a></li>
+					<li><a href="#" onclick="return false"> <img
+							src="/resources/images/summer.jpg" alt=""></a> <time
+							datetime="2020-05-26">MAY 5, 2020</time> <a href=""><h3>타임스페이스는
+								사용자 중심의 웹페이지 제작 회사입니다</h3> </a></li>
+					<li><a href="#" onclick="return false"> <img
+							src="/resources/images/summer.jpg" alt=""></a> <time
+							datetime="2020-05-26">MAY 5, 2020</time> <a href=""><h3>타임스페이스는
+								사용자 중심의 웹페이지 제작 회사입니다</h3> </a></li>
+				</ul>
+			</div>
+		</section>
+		
+		<!-- CONTACT US 더미 -->
+		<section class="contact-section">
+			<div class="container">
+				<h2 class="sec-tit" id="contactus">CONTACT</h2>
+				<div class="form-box">
+					<form action="" method="">
+						<fieldset class="cfixed">
+							<legend class="blind">CONTACT US</legend>
+							<div class="form">
+								<label for="name" class="blind">name</label> <input type="text"
+									id="name" placeholder="Name"> <label for="phone"
+									class="blind">phone</label> <input type="tel" id="phone"
+									placeholder="Phone"> <label for="email" class="blind">email</label>
+								<input type="email" id="email" placeholder="Email Address">
+							</div>
+							<div class="textarea">
+								<label for="message" class="blind">message</label>
+								<textarea name="message" id="message" placeholder="Message"></textarea>
+							</div>
+						</fieldset>
+						<div class="send-btn">
+							<button>메세지 보내기</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</section>
+		
 		<footer class="footer">
 			<p class="copyright">LOGO</p>
 		</footer>
 	</div>
+	<a href="#" class="s_point"><p class="go_top">TOP</p></a>
 </body>
 </html>

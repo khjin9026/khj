@@ -65,29 +65,62 @@
 }
 
 /* 태블릿 WE ARE 영역 CSS */
-@media all and (min-width:768px){
-  .display-section{
-  margin-top:95px;
-  }
-/* 태블릿 WE ARE 내용 영역 CSS */
-  .promotion-section{
-  margin-top:110px;
-  }
-  .promotion-section .promo-list li{
-  float:left;
-  width:23.046875%;
-  /* 177px ÷ 768px*/
-  margin-left:2.604166666666667%;
-  /* 20px ÷ 768px*/
-  margin-top:0;
-  }
-  .promotion-section .promo-list li img {
-	height: 133px;
+@media all and (min-width:768px) {
+	.display-section {
+		margin-top: 95px;
+	}
+	/* 태블릿 WE ARE 내용 영역 CSS */
+	.promotion-section {
+		margin-top: 110px;
+	}
+	.promotion-section .promo-list li {
+		float: left;
+		width: 23.046875%;
+		/* 177px ÷ 768px*/
+		margin-left: 2.604166666666667%;
+		/* 20px ÷ 768px*/
+		margin-top: 0;
+	}
+	.promotion-section .promo-list li img {
+		height: 133px;
+	}
+	.promotion-section .promo-list li:first-child {
+		margin-left: 0;
+	}
 }
-  .promotion-section .promo-list li:first-child{
-  margin-left:0;
-  }
-  }
+/* PC용 css */
+@media all and (min-width:1132px) {
+	.display-section {
+		text-align: left;
+	}
+	.display-section .sec-tit {
+		float: left;
+		margin-bottom: 0;
+	}
+	.display-section .desc {
+		position: relative;
+		float: right;
+		padding-left: 20px;
+		font-family: "굴림";
+		color: #616161;
+		line-height: 1.9;
+	}
+	.display-section .desc:before {
+		display: block;
+		position: absolute;
+		top: 9px;
+		left: 0;
+		width: 2px;
+		height: 44px;
+		background: #e0e0e0;
+		content: "";
+	}
+	/* pc we are 내용 영역 */
+	.promotion-section .promo-list li {
+		width: 23.67491166077739%;
+		margin-left: 1.76688445229682%;
+	}
+}
 </style>
 
 <script src="/resources/js/jquery.min.js"></script>
