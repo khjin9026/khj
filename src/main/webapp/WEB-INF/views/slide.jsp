@@ -8,7 +8,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <!-- 위 뷰포트 메타태그 값은 모바일 기기에서 화면을 최적화 시키는 기능이 있음(필수) -->
-<title>반응형웹의구조</title>
+<title>SIMPSONS</title>
 <style>
 /* 공통 css */
 .center { margin: 0 auto; }
