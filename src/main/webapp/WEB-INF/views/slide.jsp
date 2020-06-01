@@ -42,6 +42,7 @@
     img, iframe { height: auto; }
     .fr { float: right; }
 
+
     /* Tablet Size: 960px 이하 */
     @media all and (max-width: 960px) {
       body {
@@ -112,6 +113,7 @@
       position: relative;
       margin: 0 auto;
     }
+    
     body header .row #brand {
       background: url(resources/images/nut.jpg) no-repeat 100% -50%;
       background-size: 80px 80px; 
@@ -156,6 +158,8 @@
       text-shadow: none;
       font-weight:bold;
     }
+    
+
     body section#contents h2, body section#contents h3 {
       position: relative;
       margin-bottom: 40px;
@@ -247,7 +251,7 @@
     }
     section.banner_slider { display:none;}
     body section#contents {margin-top:90px;}
-    /* nav > ul {display:none;} */
+    /* nav > ul {display:none;} -> 메뉴바 처음에 안보이게 해주는 css */
     body header {z-index:999;}
     body header .hamberger {float:right;}
     body header a#pull {
@@ -276,6 +280,7 @@
     body header .row #gnb ul {
     background-color: #FB2A80;
     width:100%;
+        display:none;
     }
     body header .row #gnb ul li {
     float: none;
@@ -313,12 +318,42 @@
     }
     }
     .nivo-caption { text-align:center !important;}
+    .nivo-caption { background:#FB2A80 !important; }
+    
 </style>
 <script src="/resources/js/jquery.min.js"></script>
 <script type="text/javascript">
 	jQuery(function($) { //j쿼리 시작 : $(document).ready(function(){ }); == $(function(){ }); 과 동일
+//모바일 메뉴 로딩시
+		 var pull=$('#pull');
+         var menu=$('nav > ul');
+         $(pull).on('click', function(e){
+           var w=$(window).width();
+           if(w<960 )	{
+             if(menu.is(':visible')){
+                 //alert('닫을때');
+                 menu.slideToggle("fast");
+                 return;   	      		
+             }
+             if(menu.is(':hidden')){
+                 //alert('열때');
+                 menu.slideToggle("fast");
+                 return;
+             }
+           }
+     }); //클릭이벤트
+   });
+	//모바일 -> PC 원상복귀
+	$(window).resize(function(){
+		var w=$(window).width();
+        var menu=$('nav > ul');
+        if(w>960 )	{
+          menu.removeAttr('style');
+        }else{
 
-	});
+        }
+        return;
+    });
 </script>
 </head>
 <body>
@@ -344,64 +379,91 @@
 		</div>
 	</header>
 	<!-- e:header-->
+	<script src="/resources/js/jquery.nivo.slider.js"></script>
+    <link href="/resources/css/nivo-slider.css" media="screen" rel="stylesheet" type="text/css">
+    
+    <script type="text/javascript">
+	jQuery(function($){ //j쿼리 시작 : $(document).ready(function(){}); == $(function(){});와 동일
+	$('#slider').nivoSlider({
+		effect: 'slideInLeft',
+	directionNav: true,
+	controlNav: false,
+	pauseOnHover:true,
+	prevText: '<span style="font-size:30px; color:#FB2A80; padding-left:10px;"> &lt; </span>',
+	nextText: '<span style="font-size:30px; color:#FB2A80; padding-right:10px;"> &gt; </span>',
+	});
+	$('.nivo-prevNav').on('mouseover',function(){
+		$('#slider img').attr("data-transition","sliderInRight");
+	});
+	$('.nivo-nextNav').on('mouseover',function(){
+		$('#slider img').attr("data-transition","sliderInLeft");
+	});
+	
+	});
+
+	</script>
+	
 	<section class="banner_slider">
-		<div id="slider" class="nivoSlider">
-			<img src="/resources/images/spring.JPG" title="슬라이드1" />
-		</div>
-	</section>
-	<section id="contents" class="row">
-		<article id="main">
-			<h2>《The Simpsons》is an American sitcom animation created by Matt Graning and aired at Fox Broadcasting Company.</h2>
-			<ul>
-				<li class="clearfix"><img class="col-4"
-					src="/resources/images/universe.jpg" alt="" width="296" height="206" />
-					<div class="col-8 last">
-						<h4>What is the Simpson?</h4>
-						<p>The Simpsons is a family sitcom that depicts the daily life of the Simpsons and their neighbors in Homer,
-						 Marge, Bart, Lisa and Maggie, who live in the city of Springfield, USA. It features unique yellow skin,
-						 rounded paintings, and colorful drawings. The humorous and ridiculous life of the Simpsons and the residents
-						 of Springfield is an animation that the whole family can sit down to see together in a way that ends with a
-						 warm ending, and has a thick fan base from around the world. </p>
-					</div></li>
-				<li class="clearfix"><img class="col-8 fr last"
-					src="/resources/images/fam.jpg" alt="" width="620" height="416" />
-					<div class="col-4">
-						<h4>Simpson Family</h4>
-						<p>It began by satirizing and twisting the perfect home, the main theme of the existing American sitcom.
-						And the material was gradually expanded to various areas. The main theme is to parody classical literature,
-						modern movies and novels in addition to politics, excessive nationalism, and nationalism.</p>
-					</div></li>
-			</ul>
-		</article>
-		<!-- e:#main -->
-		<article id="sub" class="row clearfix">
-			<h3>
-			
-			</h3>
-			<ul>
-				<li class="col-3"><img src="/resources/images/pig.jpg"
-					alt="" width="218" height="325" />
-					<h5>Spider Pig</h5>
-					<p>Spider Pig! Spider Pig!
-					<br>Does whatever a spider pig does♪</p></li>					
-				<li class="col-3"><img src="/resources/images/aa.jpg"
-					alt="" width="218" height="326" />
-					<h5>Chung-Gong-Ggaeng</h5>
-					<p>That flag is mine! Don't MESS with Texas! Shock and awe, losers! Shock and awe!! </p></li>
-				<li class="col-6 last"><img src="/resources/images/doh.jpg"
-					alt="" width="459" height="324" />
-					<h5>DO'h!</h5>
-					<p>Eat all the doughnut in the world!</p></li>
-			</ul>
-		</article>
-		<!-- e:#sub-->
-	</section>
-	<!-- e:#contents-->
-	<footer>
-		<p class="row">
-			<small> © SPRINGFIELD in Hommer Simpson's Family </small>
-		</p>
-	</footer>
-	<!-- e:footer-->
+	<div id="slider" class="nivoSlider">
+		<img src="/resources/images/spring.JPG" title="SPRINGFIELD" />
+		<img src="/resources/images/s1.jpg" title="Simpson Family" />
+		<img src="/resources/images/s2.png" title="Simpson's House" />
+		<img src="/resources/images/s3.jpg" title="Do'h!" />
+	</div>
+</section>
+   
+<section id="contents" class="row">
+<article id="main">
+	<h2>《The Simpsons》is an American sitcom animation created by Matt Graning and aired at Fox Broadcasting Company.</h2>
+	<ul>
+		<li class="clearfix"><img class="col-4"
+			src="/resources/images/universe.jpg" alt="" width="296" height="206" />
+			<div class="col-8 last">
+				<h4>What is the Simpson?</h4>
+				<p>The Simpsons is a family sitcom that depicts the daily life of the Simpsons and their neighbors in Homer,
+				 Marge, Bart, Lisa and Maggie, who live in the city of Springfield, USA. It features unique yellow skin,
+				 rounded paintings, and colorful drawings. The humorous and ridiculous life of the Simpsons and the residents
+				 of Springfield is an animation that the whole family can sit down to see together in a way that ends with a
+				 warm ending, and has a thick fan base from around the world. </p>
+			</div></li>
+		<li class="clearfix"><img class="col-8 fr last"
+			src="/resources/images/fam.jpg" alt="" width="620" height="416" />
+			<div class="col-4">
+				<h4>Simpson Family</h4>
+				<p>It began by satirizing and twisting the perfect home, the main theme of the existing American sitcom.
+				And the material was gradually expanded to various areas. The main theme is to parody classical literature,
+				modern movies and novels in addition to politics, excessive nationalism, and nationalism.</p>
+			</div></li>
+	</ul>
+</article>
+<!-- e:#main -->
+<article id="sub" class="row clearfix">
+	<h3>
+	The Best scence of Simpson Episode
+	</h3>
+	<ul>
+		<li class="col-3"><img src="/resources/images/pig.jpg"
+			alt="" width="218" height="325" />
+			<h5>Spider Pig</h5>
+			<p>Spider Pig! Spider Pig!
+			<br>Does whatever a spider pig does♪</p></li>					
+		<li class="col-3"><img src="/resources/images/aa.jpg"
+			alt="" width="218" height="326" />
+			<h5>Chung-Gong-Ggaeng</h5>
+			<p>That flag is mine! Don't MESS with Texas! Shock and awe, losers! Shock and awe!! </p></li>
+		<li class="col-6 last"><img src="/resources/images/doh.jpg"
+			alt="" width="459" height="324" />
+			<h5>DO'h!</h5>
+			<p>Eat all the doughnut in the world!</p></li>
+	</ul>
+</article>
+<!-- e:#sub-->
+</section>
+<!-- e:#contents-->
+<footer>
+	<p class="row">
+		<small> © SPRINGFIELD in Hommer Simpson's Family </small>
+	</p>
+	</footer><!-- e:footer-->
 </body>
 </html>

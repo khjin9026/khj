@@ -39,6 +39,7 @@
 }
 
 .promotion-section .promo-list li img {
+	width: 200px;
 	height: 180px;
 }
 
@@ -315,7 +316,7 @@
 		height: 432px;
 	}
 	.footer p {
-		margin: 34px 0;
+		margin: 20px 0;
 	}
 }
 	

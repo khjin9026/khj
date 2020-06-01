@@ -43,7 +43,8 @@ color:white !important;
 	<div id="wrap">
 		<header class="header cfixed">
 			<h1 class="logo">
-				<a href="">LOGO</a>
+			    <img src="/resources/images/travel.png" >
+				<a href="">SUMMER</a>
 			</h1>
 			<nav>
 				<ul class="gnb">
@@ -79,19 +80,20 @@ color:white !important;
 						<li><a href="#" onclick="return false"> <img
 								src="/resources/images/summer.jpg" alt="">
 								<h3>HOME</h3>
-								<p>미안하다 이거 보여주려고 어그로 끌었다.</a></li>
+								<p>미안하다 이거 보여주려고 어그로 끌었다.</p>
+								</a></li>
 						<li><a href="#" onclick="return false"> <img
-								src="/resources/images/summer.jpg" alt="">
+								src="/resources/images/beach.jpg" alt="">
 								<h3>WE ARE</h3>
 								<p>미안하다 이거 보여주려고 어그로 끌었다.</p>
 						</a></li>
 						<li><a href="#" onclick="return false"> <img
-								src="/resources/images/summer.jpg" alt="">
+								src="/resources/images/water.jpg" alt="">
 								<h3>WORK</h3>
 								<p>미안하다 이거 보여주려고 어그로 끌었다.</p>
 						</a></li>
 						<li><a href="#" onclick="return false"> <img
-								src="/resources/images/summer.jpg" alt="">
+								src="/resources/images/leaf.jpg" alt="">
 								<h3>BLOG</h3>
 								<p>미안하다 이거 보여주려고 어그로 끌었다.</p>
 						</a></li>
@@ -208,7 +210,8 @@ color:white !important;
 		</section>
 		
 		<footer class="footer">
-			<p class="copyright">LOGO</p>
+			<img src="/resources/images/travel.png" >
+			<p class="copyright">SUMMER</p>
 		</footer>
 	</div>
 	<a href="#" class="s_point"><p class="go_top">TOP</p></a>
