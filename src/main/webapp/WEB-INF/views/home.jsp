@@ -27,6 +27,7 @@ background:blue;
 z-index:100;
 color:white !important;
 }
+   
 </style>
 
 <script src="/resources/js/jquery.min.js"></script>
@@ -34,8 +35,12 @@ color:white !important;
 
 <!-- 사용자 스크립트 -->
 <script>
+	</script>
 	
-</script>
+<!-- 부트스트랩 -->
+    <link href="/resources/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<!-- 모든 컴파일된 플러그인을 포함합니다 (아래), 원하지 않는다면 필요한 각각의 파일을 포함하세요 -->
+    <script src="/resources/bootstrap/js/bootstrap.min.js"></script>
 </head>
 <body>
 	<!-- 더미 데이터:CSS작업전 내용 -->
@@ -202,7 +207,7 @@ color:white !important;
 							</div>
 						</fieldset>
 						<div class="send-btn">
-							<button>메세지 보내기</button>
+							<button type="button" class="" data-toggle="modal" data-target="#exampleModal">메세지 보내기</button>
 						</div>
 					</form>
 				</div>
@@ -215,5 +220,30 @@ color:white !important;
 		</footer>
 	</div>
 	<a href="#" class="s_point"><p class="go_top">TOP</p></a>
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+    
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">메세지 보내기</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      
+      <div class="modal-body">
+        <input class="form-control" type="text" id="message" placeholder="메세지 내용 입력">
+      </div>
+      
+      <div class="modal-footer">
+      <button type="button" class="btn btn-primary">수정</button>     
+        <button type="button" class="btn btn-danger">삭제</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">닫기</button>
+    </div>
+  </div>
+</div>
 </body>
 </html>
