@@ -162,10 +162,12 @@
 
     body section#contents h2, body section#contents h3 {
       position: relative;
+      margin-top:40px;
       margin-bottom: 40px;
       border-bottom: 1px solid #e1dcda;
       padding-bottom: 20px;
       font-size: 24px;
+          font-weight: bold !important;
       line-height:34px;
       color: #3A4C9F;
       padding:20px;
@@ -194,6 +196,7 @@
     }
     body section#contents li h4, body section#contents li h5 {
       font-size: 22px;
+      font-weight: bold !important;
     }
     body section#contents li h5 {
       margin-top: 22px;
@@ -258,6 +261,11 @@
     position:relative;
     top:-55px;
     }
+    
+    body section#contents h2 {
+      margin-top:100px !important;
+      }
+      
     body header .row #brand {
       background: url(resources/images/nut.jpg) no-repeat 50% 50%;
       background-size: 70px 70px; 
@@ -320,6 +328,31 @@
     .nivo-caption { text-align:center !important;}
     .nivo-caption { background:#FB2A80 !important; }
     
+    .row {
+    margin: 0 auto !important;
+    }
+    .carousel-control .slide_arrow {
+    position: absolute;
+    top: 50% !important;
+    color: #FB2A80 !important;
+    }
+    
+    .carousel-control.left, .carousel-control.right {
+    background-image: none !important;
+    }
+    
+    .carousel-indicators li {
+    border: 1px solid #FB2A80 !important;
+    }
+    
+    .carousel-indicators .active {
+    background-color: #FB2A80 !important;
+    }
+    
+    .carousel-inner .item img {
+    height: 550px !important;
+    width: 100% !important;
+    }
 </style>
 <script src="/resources/js/jquery.min.js"></script>
 <script type="text/javascript">
@@ -379,6 +412,8 @@
 		</div>
 	</header>
 	<!-- e:header-->
+	
+	<!-- 니보 슬라이더 작동 스크립트
 	<script src="/resources/js/jquery.nivo.slider.js"></script>
     <link href="/resources/css/nivo-slider.css" media="screen" rel="stylesheet" type="text/css">
     
@@ -388,7 +423,7 @@
 		effect: 'slideInLeft',
 	directionNav: true,
 	controlNav: false,
-	pauseOnHover:true,
+	pauseOnHover:false,
 	prevText: '<span style="font-size:30px; color:#FB2A80; padding-left:10px;"> &lt; </span>',
 	nextText: '<span style="font-size:30px; color:#FB2A80; padding-right:10px;"> &gt; </span>',
 	});
@@ -402,14 +437,70 @@
 	});
 
 	</script>
-	
+	-->
+
+	<script src="/resources/bootstrap/js/bootstrap.min.js"></script>
+    <link href="/resources/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	<script>
+	jQuery(function($) {
+		$('.carousel').carousel({
+			  interval: 2500,
+			  pause: "hover"
+			})
+	});
+	</script>
 	<section class="banner_slider">
+	<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+  </ol>
+  <div class="carousel-inner">
+    <div class="item active">
+      <img src="/resources/images/spring.JPG" class="d-block w-100" alt="...">
+    </div>
+    <div class="item">
+      <img src="/resources/images/s1.jpg" class="d-block w-100" alt="...">
+    </div>
+    <div class="item">
+      <img src="/resources/images/s2.png" class="d-block w-100" alt="...">
+    </div>
+    <div class="item">
+      <img src="/resources/images/s3.jpg" class="d-block w-100" alt="...">
+    </div>
+  </div>
+  
+  <!-- <a class="left carousel-control" href="#carouselExampleIndicators" data-slide="prev" onclick="$('#myCarousel').carousel('prev')">
+	  <span class="slide_arrow" style="font-size:30px;font-weight:bold;">&lt;</span>
+	  </a>
+	  <a class="right carousel-control" href="#carouselExampleIndicators" data-slide="next" onclick="$('#myCarousel').carousel('next')">
+	  <span class="slide_arrow" style="font-size:30px;font-weight:bold;">&gt;</span>
+	  </a> -->
+  
+  
+  <a class="left carousel-control" href="#carouselExampleIndicators" role="button" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true" style="color:#FB2A80;"></span>
+
+  </a>
+  <a class="right carousel-control" href="#carouselExampleIndicators" role="button" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true" style="color:#FB2A80;"></span>
+
+  </a>    
+
+    
+</div>
+
+	<!-- 니보 슬라이더용 비지니스 폼
 	<div id="slider" class="nivoSlider">
 		<img src="/resources/images/spring.JPG" title="SPRINGFIELD" />
 		<img src="/resources/images/s1.jpg" title="Simpson Family" />
 		<img src="/resources/images/s2.png" title="Simpson's House" />
 		<img src="/resources/images/s3.jpg" title="Do'h!" />
 	</div>
+	-->
+	
 </section>
    
 <section id="contents" class="row">
@@ -445,7 +536,7 @@
 		<li class="col-3"><img src="/resources/images/pig.jpg"
 			alt="" width="218" height="325" />
 			<h5>Spider Pig</h5>
-			<p>Spider Pig! Spider Pig!
+			<p><span style="color: #FB2A80;">Spider Pig! Spider Pig!</span>
 			<br>Does whatever a spider pig does♪</p></li>					
 		<li class="col-3"><img src="/resources/images/aa.jpg"
 			alt="" width="218" height="326" />
