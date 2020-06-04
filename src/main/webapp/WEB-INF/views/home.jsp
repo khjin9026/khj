@@ -171,8 +171,6 @@ color:white !important;
 							src="/resources/images/summer.jpg" alt=""></a> <time
 							datetime="2020-05-26">MAY 5, 2020</time> <a href=""><h3>
 								타임스페이스는 사용자 중심의 웹페이지 제작 회사입니다 <br>안녕하세요 감사해요 잘있어요 다시만나요
-								아침해가 뜨면 매일같은 사람들과 또 다시 새로운 하루 일을 시작해 <br>안녕하세요 감사해요 잘있어요
-								다시만나요
 							</h3> </a></li>
 					<li><a href="#" onclick="return false"> <img
 							src="/resources/images/summer.jpg" alt=""></a> <time
