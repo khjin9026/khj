@@ -17,17 +17,16 @@
 <link rel="stylesheet" type="text/css" href="/resources/css/user.css">
 <style>
 .go_top {
-position: fixed;
-padding:20px;
-opacity:0.8;
-right: 20px;
-bottom:112px;
-text-align:center;
-background:blue;
-z-index:100;
-color:white !important;
+	position: fixed;
+	padding: 20px;
+	opacity: 0.8;
+	right: 20px;
+	bottom: 112px;
+	text-align: center;
+	background: blue;
+	z-index: 100;
+	color: white !important;
 }
-   
 </style>
 
 <script src="/resources/js/jquery.min.js"></script>
@@ -35,12 +34,13 @@ color:white !important;
 
 <!-- 사용자 스크립트 -->
 <script>
-	</script>
 	
+</script>
+
 <!-- 부트스트랩 -->
-    <link href="/resources/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<link href="/resources/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 <!-- 모든 컴파일된 플러그인을 포함합니다 (아래), 원하지 않는다면 필요한 각각의 파일을 포함하세요 -->
-    <script src="/resources/bootstrap/js/bootstrap.min.js"></script>
+<script src="/resources/bootstrap/js/bootstrap.min.js"></script>
 </head>
 <body>
 	<!-- 더미 데이터:CSS작업전 내용 -->
@@ -48,8 +48,7 @@ color:white !important;
 	<div id="wrap">
 		<header class="header cfixed">
 			<h1 class="logo">
-			    <img src="/resources/images/travel.png" >
-				<a href="">SUMMER</a>
+				<img src="/resources/images/travel.png"> <a href="">SUMMER</a>
 			</h1>
 			<nav>
 				<ul class="gnb">
@@ -63,12 +62,12 @@ color:white !important;
 			<span class="menu-toggle-btn"> <span></span> <span></span> <span></span>
 			</span>
 		</header>
-		
+
 		<!-- HOME 더미 -->
 		<article class="slider">
 			<img src="/resources/images/summer.jpg" alt="">
 		</article>
-		
+
 		<!-- WE ARE 더미 -->
 		<section class="content">
 			<section class="display-section">
@@ -86,7 +85,7 @@ color:white !important;
 								src="/resources/images/summer.jpg" alt="">
 								<h3>HOME</h3>
 								<p>미안하다 이거 보여주려고 어그로 끌었다.</p>
-								</a></li>
+						</a></li>
 						<li><a href="#" onclick="return false"> <img
 								src="/resources/images/beach.jpg" alt="">
 								<h3>WE ARE</h3>
@@ -106,7 +105,7 @@ color:white !important;
 				</div>
 			</section>
 		</section>
-		
+
 		<!-- WORK 더미 -->
 		<section class="work-section cfixed">
 			<h2 class="sec-tit" id="work">WORK</h2>
@@ -161,7 +160,7 @@ color:white !important;
 				</a>
 			</ul>
 		</section>
-		
+
 		<!-- BLOG 더미 -->
 		<section class="blog-section">
 			<div class="container">
@@ -183,7 +182,7 @@ color:white !important;
 				</ul>
 			</div>
 		</section>
-		
+
 		<!-- CONTACT US 더미 -->
 		<section class="contact-section">
 			<div class="container">
@@ -205,43 +204,49 @@ color:white !important;
 							</div>
 						</fieldset>
 						<div class="send-btn">
-							<button type="button" class="" data-toggle="modal" data-target="#exampleModal">메세지 보내기</button>
+							<button type="button" class="" data-toggle="modal"
+								data-target="#exampleModal">메세지 보내기</button>
 						</div>
 					</form>
 				</div>
 			</div>
 		</section>
-		
+
 		<footer class="footer">
-			<img src="/resources/images/travel.png" >
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3315.074067146276!2d-117.92505714919277!3d33.81040163778826!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80dcd7da84d77583%3A0x7efd02b2f50ccd51!2z65SU7KaI64uI656c65OcIOumrOyhsO2KuA!5e0!3m2!1sko!2skr!4v1591236621464!5m2!1sko!2skr" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>"
+			<img src="/resources/images/travel.png">
 			<p class="copyright">SUMMER</p>
 		</footer>
 	</div>
 	<a href="#" class="s_point"><p class="go_top">TOP</p></a>
 
 
-<!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-    
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">메세지 보내기</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      
-      <div class="modal-body">
-        <input class="form-control" type="text" id="message" placeholder="메세지 내용 입력">
-      </div>
-      
-      <div class="modal-footer">
-      <button type="button" class="btn btn-primary">수정</button>     
-        <button type="button" class="btn btn-danger">삭제</button>
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">닫기</button>
-    </div>
-  </div>
-</div>
+	<!-- Modal -->
+	<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
+		aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLabel">메세지 보내기</h5>
+					<button type="button" class="close" data-dismiss="modal"
+						aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+
+				<div class="modal-body">
+					<input class="form-control" type="text" id="message"
+						placeholder="메세지 내용 입력">
+				</div>
+
+				<div class="modal-footer">
+					<button type="button" class="btn btn-primary">수정</button>
+					<button type="button" class="btn btn-danger">삭제</button>
+					<button type="button" class="btn btn-secondary"
+						data-dismiss="modal">닫기</button>
+				</div>
+			</div>
+		</div>
 </body>
 </html>

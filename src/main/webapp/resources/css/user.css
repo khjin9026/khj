@@ -9,10 +9,8 @@
 }
 
 .header .gnb li a {
-margin-top:0px !important;
+	margin-top: 0px !important;
 }
-
-
 
 /* 모바일_we are CSS */
 .display-section {
@@ -260,7 +258,7 @@ margin-top:0px !important;
 		margin-left: 0;
 	}
 
-/* 태블릿_work css */
+	/* 태블릿_work css */
 	.work-section {
 		margin-top: 118px;
 	}
@@ -278,7 +276,7 @@ margin-top:0px !important;
 		transform: translateY(20px);
 	}
 
-/* 태블릿_blog css */
+	/* 태블릿_blog css */
 	.blog-section {
 		margin-top: 124px;
 	}
@@ -297,7 +295,7 @@ margin-top:0px !important;
 		margin-left: 0;
 	}
 
-/* 태블릿_contact us css */
+	/* 태블릿_contact us css */
 	.contact-section {
 		margin-top: 176px;
 	}
@@ -316,16 +314,16 @@ margin-top:0px !important;
 	.contact-section .form-box .form input:last-child {
 		margin-bottom: 0;
 	}
-	
+
 	/* 태블릿_footer css */
-.footer iframe {
+	.footer iframe {
 		height: 432px;
 	}
 	.footer p {
 		margin: 20px 0;
 	}
 }
-	
+
 /* PC */
 /* PC_ WE ARE css */
 @media all and (min-width:1132px) {
@@ -360,7 +358,7 @@ margin-top:0px !important;
 		margin-left: 1.76688445229682%;
 	}
 
-/* PC_work css */
+	/* PC_work css */
 	.work-section .sec-tit {
 		text-align: left;
 	}
@@ -368,7 +366,7 @@ margin-top:0px !important;
 		width: 25%;
 	}
 
-/* PC_BLOG css */
+	/* PC_BLOG css */
 	.blog-section .sec-tit {
 		float: left;
 		margin-bottom: 0;
@@ -382,7 +380,7 @@ margin-top:0px !important;
 		margin-left: 2.369668246445498%;
 	}
 
-/* PC_contact us css */
+	/* PC_contact us css */
 	.contact-section .sec-tit {
 		float: left;
 		margin-bottom: 0;
