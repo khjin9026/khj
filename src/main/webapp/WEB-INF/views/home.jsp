@@ -213,8 +213,11 @@
 		</section>
 
 		<footer class="footer">
-		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3315.074067146276!2d-117.92505714919277!3d33.81040163778826!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80dcd7da84d77583%3A0x7efd02b2f50ccd51!2z65SU7KaI64uI656c65OcIOumrOyhsO2KuA!5e0!3m2!1sko!2skr!4v1591236621464!5m2!1sko!2skr" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>"
-			<img src="/resources/images/travel.png">
+			<iframe
+				src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3315.074067146276!2d-117.92505714919277!3d33.81040163778826!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80dcd7da84d77583%3A0x7efd02b2f50ccd51!2z65SU7KaI64uI656c65OcIOumrOyhsO2KuA!5e0!3m2!1sko!2skr!4v1591236621464!5m2!1sko!2skr"
+				width="600" height="450" frameborder="0" style="border: 0;"
+				allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+			" <img src="/resources/images/travel.png">
 			<p class="copyright">SUMMER</p>
 		</footer>
 	</div>
