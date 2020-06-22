@@ -1,0 +1,10 @@
+2020-06-22 10:41:50,341  WARN [org.apache.log4j.joran.action.PriorityAction] Priority element has been deprecated, please use <level> instead.
+2020-06-22 10:41:50,356  INFO [kr.or.test.Log4jTest] test라는 메서드를 사용한 pc아이피는 192.168.56.1
+2020-06-22 10:41:50,356 DEBUG [kr.or.test.Log4jTest] 디버그!!MemberVO [name=가가가, age=999, phoneNum=null]
+2020-06-22 10:41:50,356  INFO [kr.or.test.Log4jTest] 인포!!
+2020-06-22 10:41:50,356  WARN [kr.or.test.Log4jTest] 워닝!!
+2020-06-22 10:41:50,356 ERROR [kr.or.test.Log4jTest] 에러!!
+2020-06-22 10:41:50,356 FATAL [kr.or.test.Log4jTest] 파탈에러!!
+2020-06-22 10:42:14,021  WARN [org.apache.log4j.joran.action.PriorityAction] Priority element has been deprecated, please use <level> instead.
+2020-06-22 10:42:14,040  INFO [kr.or.test.Log4jTest] test라는 메서드를 사용한 pc아이피는 192.168.56.1
+2020-06-22 10:42:14,041 DEBUG [kr.or.test.Log4jTest] 디버그!!MemberVO [name=가가가, age=999, phoneNum=null]

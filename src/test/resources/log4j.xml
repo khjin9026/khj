@@ -10,7 +10,25 @@
 		</layout>
 	</appender>
 	
+	<!-- 파일에 로그 찍기! log4j = log for java -->
+    <!-- log4j-1.3alpha-8 스타일 - 패키지 변경 및 policy 처리로 구조 변경 됨 -->
+<appender name="fileLogger" class="org.apache.log4j.rolling.RollingFileAppender">
+	<rollingPolicy class="org.apache.log4j.rolling.FixedWindowRollingPolicy">
+		<param name="FileNamePattern" value="./spring.%i.log" />
+		<param name="MaxIndex" value="3" />
+	</rollingPolicy>
+	<triggeringPolicy class="org.apache.log4j.rolling.SizeBasedTriggeringPolicy">
+		<param name="MaxFileSize" value="1000" />
+	</triggeringPolicy>
+	<layout class="org.apache.log4j.PatternLayout">
+		<param name="ConversionPattern" value="%d %5p [%c] %m%n" />
+	</layout>
+</appender>
+	
 	<!-- Application Loggers -->
+	<logger name="kr.or.test">
+		<level value="debug" />
+	</logger>
 	<logger name="org.edu.controller">
 		<level value="info" />
 	</logger>
@@ -36,6 +54,7 @@
 	<root>
 		<priority value="info" />
 		<appender-ref ref="console" />
+		<appender-ref ref="fileLogger" />
 	</root>
 	
 </log4j:configuration>
