@@ -158,48 +158,60 @@
 								<!-- general form elements disabled -->
 								<div class="card card-warning">
 									<div class="card-header">
-										<h3 class="card-title">General Elements</h3>
+										<h3 class="card-title">CREATE Board</h3>
 									</div>
 									<!-- /.card-header -->
 									<div class="card-body">
 										<form role="form">
 											<div class="row">
-												<div class="col-sm-6">
+												<div class="col-sm-12">
 													<!-- text input -->
 													<div class="form-group">
-														<label>Text</label> <input type="text"
-															class="form-control" placeholder="Enter ...">
+														<label>Title</label> <input type="text"
+															class="form-control" placeholder="제목 입력">
 													</div>
 												</div>
-												<div class="col-sm-6">
-													<div class="form-group">
-														<label>Text Disabled</label> <input type="text"
-															class="form-control" placeholder="Enter ..." disabled>
-													</div>
-												</div>
-											</div>
-											<div class="row">
-												<div class="col-sm-6">
+												<div class="col-sm-12">
 													<!-- textarea -->
 													<div class="form-group">
-														<label>Textarea</label>
+														<label>Content</label>
 														<textarea class="form-control" rows="3"
-															placeholder="Enter ..."></textarea>
+															placeholder="내용 입력"></textarea>
 													</div>
 												</div>
-												<div class="col-sm-6">
+												<div class="col-sm-12">
+													<!-- text input -->
 													<div class="form-group">
-														<label>Textarea Disabled</label>
-														<textarea class="form-control" rows="3"
-															placeholder="Enter ..." disabled></textarea>
+														<label>Writer</label> <input type="text"
+															class="form-control" placeholder="작성자 입력">
 													</div>
+												</div>
+												<div
+													class="form-group note-form-group note-group-select-from-files">
+													<label for="note-dialog-image-file-15928145942921"
+														class="note-form-label">아래 기존파일 업로드 창 사용가능</label><input
+														id="note-dialog-image-file-15928145942921"
+														class="note-image-input form-control-file note-form-control note-input"
+														type="file" name="files" accept="image/*"
+														multiple="multiple">
 												</div>
 											</div>
-
-
+											
 										</form>
 									</div>
 									<!-- /.card-body -->
+									<div class="box-footer" style="padding:10px;">
+
+										<div>
+											<hr>
+										</div>
+										<ul class="mailbox-attachments clearfix uploadedList">
+										</ul>
+										<button type="submit" class="btn btn-warning">작성하기</button>
+										<button type="button" class="btn btn-primary">전체목록</button>
+									</div>
+									
+									
 								</div>
 								<!-- /.card -->
 								<!-- general form elements disabled -->
@@ -208,11 +220,11 @@
 							</div>
 							<!-- /.col-md-6 -->
 						</div>
-						<!-- /.row -->
+						<!-- /.col-lg-12 -->
 					</div>
-					<!-- /.container-fluid -->
+					<!-- /.row -->
 				</div>
-				<!-- /.content -->
+				<!-- /.container-fluid -->
 			</div>
 			<!-- /.content-wrapper -->
 

@@ -159,96 +159,76 @@
 								<div class="card-body">
 
 									<!-- SEARCH FORM -->
-									<form class="form-inline ml-3">
-										<div class="input-group input-group-sm">
-											<input class="form-control form-control-navbar" type="search"
-												placeholder="---" aria-label="Search">
-										</div>
-
-										<div class="input-group input-group-sm">
-											<input class="form-control form-control-navbar" type="search"
-												placeholder="" aria-label="Search">
-											<div class="input-group-append"></div>
-										</div>
-
-										<div class="input-group input-group-sm">
-											<input class="form-control form-control-navbar" type="search"
-												placeholder="검색" aria-label="Search">
-
-											<div class="input-group-append">
-												<button class="btn btn-navbar" type="submit">
-													<i class="fas fa-search"></i>
-												</button>
-											</div>
-										</div>
-
+								<form class="form-inline ml-3">
+										<select class="form-control">
+											<option>---</option>
+											<option>option 2</option>
+											<option>option 3</option>
+											<option>option 4</option>
+											<option>option 5</option>
+										</select>
+										<input type="text" class="form-control" placeholder="">
+										<button type="button" style="border-color: #9F9E9B;"
+											class="btn btn-light">검색</button>
+										<button type="button" style="border-color: #9F9E9B;"
+											class="btn btn-light">새글쓰기</button>
 									</form>
-
 								</div>
 							</div>
 							<div class="row">
 								<div class="col-12">
 									<div class="card">
 										<div class="card-header">
-											<h3 class="card-title">Responsive Hover Table</h3>
-											<div class="card-tools">
-												<div class="input-group input-group-sm"
-													style="width: 150px;">
-													<input type="text" name="table_search"
-														class="form-control float-right" placeholder="Search">
-
-													<div class="input-group-append">
-														<button type="submit" class="btn btn-default">
-															<i class="fas fa-search"></i>
-														</button>
-													</div>
-												</div>
-											</div>
+											<h3 class="card-title">전체 목록</h3>
+											
 										</div>
 										<!-- /.card-header -->
 										<div class="card-body table-responsive p-0">
 											<table class="table table-hover text-nowrap">
 												<thead>
 													<tr>
-														<th>ID</th>
-														<th>User</th>
-														<th>Date</th>
-														<th>Status</th>
-														<th>Reason</th>
+														<th>Bno</th>
+														<th>Title</th>
+														<th>Writer</th>
+														<th>Regdate</th>
+														<th>Viewcnt</th>
 													</tr>
 												</thead>
 												<tbody>
 													<tr>
 														<td>183</td>
-														<td>John Doe</td>
-														<td>11-7-2014</td>
-														<td><span class="tag tag-success">Approved</span></td>
-														<td>Bacon ipsum dolor sit amet salami venison chicken
-															flank fatback doner.</td>
+														<td><a href="#">홈페이지 오픈 테스트 [0]</a></td>
+														<td>kkk</td>
+														<td><span class="tag tag-success">2020-06-22</span></td>
+														<td><span class="badge bg-danger">1</span></td>
 													</tr>
 													<tr>
 														<td>219</td>
-														<td>Alexander Pierce</td>
-														<td>11-7-2014</td>
-														<td><span class="tag tag-warning">Pending</span></td>
-														<td>Bacon ipsum dolor sit amet salami venison chicken
-															flank fatback doner.</td>
+														<td><a href="#">새로운 글을 넣습니다 [0]</a></td>
+														<td>user02</td>
+														<td><span class="tag tag-warning">2020-06-22</span></td>
+														<td><span class="badge bg-danger">0</span></td>
 													</tr>
 													<tr>
-														<td>657</td>
-														<td>Bob Doe</td>
-														<td>11-7-2014</td>
-														<td><span class="tag tag-primary">Approved</span></td>
-														<td>Bacon ipsum dolor sit amet salami venison chicken
-															flank fatback doner.</td>
+														<td>220</td>
+														<td><a href="#">새로운 글을 넣습니다 [0]</a></td>
+														<td>user02</td>
+														<td><span class="tag tag-warning">2020-06-22</span></td>
+														<td><span class="badge bg-danger">0</span></td>
 													</tr>
 													<tr>
-														<td>175</td>
-														<td>Mike Doe</td>
-														<td>11-7-2014</td>
-														<td><span class="tag tag-danger">Denied</span></td>
-														<td>Bacon ipsum dolor sit amet salami venison chicken
-															flank fatback doner.</td>
+														<td>222</td>
+														<td><a href="#">새로운 글을 넣습니다 [0]</a></td>
+														<td>user02</td>
+														<td><span class="tag tag-warning">2020-06-22</span></td>
+														<td><span class="badge bg-danger">0</span></td>
+													</tr>
+													<tr>
+														<td>215</td>
+														<td><a href="#">새로운 글을 넣습니다 [0]</a></td>
+														<td>user02</td>
+														<td><span class="tag tag-warning">2020-06-22</span></td>
+														<td><span class="badge bg-danger">1</span></td>
 													</tr>
 												</tbody>
 											</table>
@@ -271,15 +251,16 @@
 							<!-- /.row -->
 
 						</div>
+						<!-- /.col-lg-6 -->
 					</div>
-					<!-- /.col-md-6 -->
+					<!-- /.row -->
 
 				</div>
-				<!-- /.row -->
+				<!-- /.container-fluid -->
 			</div>
-			<!-- /.container-fluid -->
+			<!-- /.content -->
 		</div>
-		<!-- /.content -->
+		<!-- /.content-wrapper -->
 	
 
 	<!-- Control Sidebar -->
@@ -303,7 +284,6 @@
 		</strong> All rights reserved.
 	</footer>
 	</div>
-	<!-- /.content-wrapper -->
 	<!-- ./wrapper -->
 
 	<!-- REQUIRED SCRIPTS -->

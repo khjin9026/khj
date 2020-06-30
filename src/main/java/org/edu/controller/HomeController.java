@@ -20,7 +20,7 @@ public class HomeController {
 	private static final Logger logger = LoggerFactory.getLogger(HomeController.class);
 	
 	/**
-	 * slide 페이지 파일 경로
+	 * 슬라이드 페이지 파일 입니다.
 	 */
 	@RequestMapping(value = "/sample/slide", method = RequestMethod.GET)
 	public String slide(Locale locale, Model model) {
@@ -29,25 +29,16 @@ public class HomeController {
 	}
 	
 	/**
-	 * WE ARE 페이지 파일 경로
+	 * CONTACT US 페이지 파일 입니다.
 	 */
-	@RequestMapping(value = "/sample/weare", method = RequestMethod.GET)
-	public String weare(Locale locale, Model model) {
+	@RequestMapping(value = "/sample/contactus", method = RequestMethod.GET)
+	public String contactus(Locale locale, Model model) {
 		
-		return "sample/weare";
+		return "sample/contactus";
 	}
 	
 	/**
-	 * WORK 페이지 파일 경로
-	 */
-	@RequestMapping(value = "/sample/work", method = RequestMethod.GET)
-	public String work(Locale locale, Model model) {
-		
-		return "sample/work";
-	}
-	
-	/**
-	 * BLOG 페이지 파일 경로
+	 * BLOG 페이지 파일 입니다.
 	 */
 	@RequestMapping(value = "/sample/blog", method = RequestMethod.GET)
 	public String blog(Locale locale, Model model) {
@@ -56,12 +47,21 @@ public class HomeController {
 	}
 	
 	/**
-	 * CONTACTUS 페이지 파일 경로
+	 * WORK 페이지 파일 입니다.
 	 */
-	@RequestMapping(value = "/sample/contactus", method = RequestMethod.GET)
-	public String contactus(Locale locale, Model model) {
+	@RequestMapping(value = "/sample/work", method = RequestMethod.GET)
+	public String work(Locale locale, Model model) {
 		
-		return "sample/contactus";
+		return "sample/work";
+	}
+	
+	/**
+	 * we are 페이지 파일 입니다.
+	 */
+	@RequestMapping(value = "/sample/weare", method = RequestMethod.GET)
+	public String weare(Locale locale, Model model) {
+		
+		return "sample/weare";
 	}
 	
 	/**
@@ -74,7 +74,7 @@ public class HomeController {
 	}
 	
 	/**
-	 * 샘플파일 홈 입니다.
+	 * 샘플 파일 홈 입니다.
 	 */
 	@RequestMapping(value = "/sample/", method = RequestMethod.GET)
 	public String sample(Locale locale, Model model) {
