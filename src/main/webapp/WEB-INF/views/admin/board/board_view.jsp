@@ -45,7 +45,7 @@
 									</div>
 									<!-- /.card-header -->
 									<div class="card-body">
-										<form role="form">
+										<form role="form" action="/admin/board/delete" method="post">
 											<div class="row">
 												<div class="col-sm-12">
 													<!-- text input -->
@@ -71,6 +71,14 @@
 														<br>${boardVO.writer}
 													</div>
 												</div>
+												<div class="col-sm-12">
+													<!-- text input -->
+													<div class="form-group">
+														<label>FileDownload</label>
+														<br>
+														<a href="/download?filename=${boardVO.files[0]}">${boardVO.files[0]}</a>
+													</div>
+												</div>
 
 											</div>
 											<div class="box-footer">
@@ -78,6 +86,7 @@
 											<button type="submit" class="btn btn-danger">삭제</button>
 											<a href="/admin/board/list" class="btn btn-primary">전체목록</a>
 									</div>
+									<input type="hidden" name="bno" value="${boardVO.bno}">
 										</form>
 									</div>
 									<!-- /.card-body -->

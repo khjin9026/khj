@@ -38,15 +38,16 @@
 <script>
 	$(document).ready(function() {
 		var current = location.pathname;
+		//alert(current.split("/",3)[2]); -> 디버그 값
+		var current_split = current.split("/",3)[2]; //board 또는 member 를 따로 빼줌
 		$('.nav-treeview li a').each(function() {
 			//클래스를 불러올땐 . id를 불러올땐 #
 			var $this = $(this); //가독성을 위함
-			//alert(current); -> 디버그 코드
 			if(current=="/admin" || current=="/admin/"){
 			// || -> 또는(or) 좋은 코드는 아니지만 해결은 가능	
 			}else{
 				//if ($this.attr('href').includes(current) == true) {
-				if ($this.attr('href').indexOf(current) !== -1) {
+				if ($this.attr('href').indexOf(current_split) !== -1) {
 					$this.addClass('active');
 				} else {
 					$this.removeClass('active');

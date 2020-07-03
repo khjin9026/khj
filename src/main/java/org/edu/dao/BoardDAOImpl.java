@@ -9,9 +9,8 @@ import org.edu.vo.BoardVO;
 import org.springframework.stereotype.Repository;
 
 @Repository
-//implements -> extends와 비슷하지만 IF와 매칭시킬 때 사용
 public class BoardDAOImpl implements IF_BoardDAO {
-	//Static -> 정적 메서드, 한 번 사용 후 다시 쓸일 x
+
 	private static String mapperQuery = "org.edu.dao.IF_BoardDAO";
 	
 	@Inject
@@ -40,6 +39,22 @@ public class BoardDAOImpl implements IF_BoardDAO {
 	@Override
 	public BoardVO viewBoard(Integer bno) throws Exception {
 		return sqlSession.selectOne(mapperQuery + ".viewBoard", bno);
-	} 
-	
+	}
+
+	@Override
+	public void insertAttach(String fullName) throws Exception {
+		sqlSession.insert(mapperQuery + ".insertAttach", fullName);
+	}
+
+	@Override
+	public List<String> selectAttach(Integer bno) throws Exception {
+		return sqlSession.selectList(mapperQuery + ".selectAttach", bno); 
+	}
+
+	@Override
+	public void deleteAttach(Integer bno) throws Exception {
+		sqlSession.delete(mapperQuery + ".deleteAttach", bno);
+		
+	}
+
 }

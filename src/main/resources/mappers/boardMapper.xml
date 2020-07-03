@@ -20,7 +20,6 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		values (#{title},#{content},#{writer},now(),#{view_count},#{reply_count}) 
 	</insert>
 	<select id="selectBoard" resultType="org.edu.vo.BoardVO">
-	<!-- 쿼리 문자열로 인식하게 하는 것 -> 인식이 안될때 사용 -->
 	<![CDATA[  
 		select * from tbl_board order by bno DESC
 	]]>  
@@ -41,5 +40,19 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	<select id="viewBoard" resultType="org.edu.vo.BoardVO">
 		select * from tbl_board where bno = #{bno}
 	</select>
-
+	<!-- 첨부파일 MySQL용 
+	<insert id="addAttach">
+	insert into tbl_attach(full_name, bno) values (#{fullname},LAST_INSERT_ID())
+	</insert>
+	-->
+	<!-- 첨부파일 HSql용 -->
+	<insert id="insertAttach">
+	insert into tbl_attach(full_name, bno) values (#{fullname}, (select top 1 bno from tbl_board order by bno desc) )
+	</insert>
+	<select id="selectAttach" resultType="string">
+	select full_name from tbl_attach where bno = #{bno} order by regdate
+	</select>
+	<delete id="deleteAttach">
+	delete from tbl_attach where bno = #{bno}
+	</delete>
 </mapper>

@@ -1,6 +1,7 @@
 package kr.or.test;
 
-import java.util.Scanner;
+import java.util.ArrayList;
+import java.util.List;
 
 class Tire {
 	public void run() { //메서드=함수=function()
@@ -15,6 +16,16 @@ class SnowTire extends Tire { //extends 부모 = 부모에 상속되어 있음
 public class HelloWorld {
 
 	public static void main(String[] args) {
+		List<String> files = new ArrayList<>();
+		files.add("sample1.jpg");
+		files.add("smaple2.jpg");
+		files.add("smaple3.jpg");
+		String[] filenames = new String[files.size()];
+		int cnt = 0;
+		for(String fileName : files) {
+			filenames[cnt++] = fileName;
+		}
+		System.out.println(filenames[0] + filenames[1] + filenames[2]);
 		//SnowTire클래스형 변수 snowTire 생성
 		//new 키워드로 SnowTire() 매서드를 이용해서
 		//snowTire인스턴스클래스(메모리공간할당) 실행된 상태(아래)
