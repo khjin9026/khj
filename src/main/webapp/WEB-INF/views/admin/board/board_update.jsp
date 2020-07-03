@@ -45,7 +45,7 @@
 							</div>
 							<!-- /.card-header -->
 							<div class="card-body">
-								<form role="form" action="/admin/board/update" method="post">
+								<form role="form" action="/admin/board/update" method="post" encType="multipart/form-data">
 									<div class="row">
 										<div class="col-sm-12">
 											<!-- text input -->
@@ -71,15 +71,25 @@
 													class="form-control" placeholder="작성자 입력">
 											</div>
 										</div>
-										<div
-											class="form-group note-form-group note-group-select-from-files">
-											<label for="note-dialog-image-file-15928145942921"
-												class="note-form-label">아래 기존파일 업로드 창 사용가능</label><input
-												id="note-dialog-image-file-15928145942921"
-												class="note-image-input form-control-file note-form-control note-input"
-												type="file" name="files" accept="image/*"
-												multiple="multiple">
+										<div class="col-sm-12">
+										<div class="form-group">
+											<label>아래 영역에 파일을 드래그 해서 업로드 가능</label>
+											<div class="col-sm-12">
+												<!-- textarea -->
+												<div class="form-group">
+													<textarea class="form-control" rows="3" disabled=""></textarea>
+												</div>
+											</div>
+											<div class="custom-file">
+												<tr>
+													<label>아래 기존 파일 업로드 창 사용가능</label>
+													<br>
+													<td><input type="file" value="파일 선택" name="file" /></td>
+												</tr>
+											</div>
 										</div>
+									
+									</div>
 									</div>
 									<!-- /.card-body -->
 									<div class="box-footer" style="padding: 10px;">
