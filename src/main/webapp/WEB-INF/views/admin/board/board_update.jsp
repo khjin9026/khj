@@ -101,8 +101,9 @@
 										</ul>
 										<!-- submit -> form안의 내용을 입력해주는 역할 so, form태그 안쪽에 있어야 작동 됨! -->
 										<input type="hidden" name="bno" value="${boardVO.bno}">
-										<button type="submit" class="btn btn-warning">작성하기</button>
-										<a href="/admin/board/list" class="btn btn-primary">전체목록</a>
+										<input type="hidden" name="page" value="${pageVO.page}">
+										<button type="submit" class="btn btn-warning">업데이트</button>
+										<a href="/admin/board/list?page=${pageVO.page}" class="btn btn-primary">전체목록</a>
 									</div>
 								</form>
 							</div>

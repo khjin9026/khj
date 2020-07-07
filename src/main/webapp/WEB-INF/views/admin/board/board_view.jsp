@@ -82,9 +82,9 @@
 
 											</div>
 											<div class="box-footer">
-										    <a href="/admin/board/update?bno=${boardVO.bno}" class="btn btn-warning">업데이트</a>
+										    <a href="/admin/board/update?bno=${boardVO.bno}&page=${pageVO.page}" class="btn btn-warning">업데이트</a>
 											<button type="submit" class="btn btn-danger">삭제</button>
-											<a href="/admin/board/list" class="btn btn-primary">전체목록</a>
+											<a href="/admin/board/list?page=${pageVO.page}" class="btn btn-primary">전체목록</a>
 									</div>
 									<input type="hidden" name="bno" value="${boardVO.bno}">
 										</form>

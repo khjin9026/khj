@@ -30,6 +30,7 @@
 	
 	<!-- main content -->
 	<div class="content">
+	<p><a href='<c:out value="${prevPage}"/>'>GO BACK</a>
 	<p> 에러 상세내역 </p>
 	<ul>
 	<c:forEach items="${exception.getStackTrace()}" var="stack">

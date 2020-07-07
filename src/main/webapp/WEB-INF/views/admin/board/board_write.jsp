@@ -100,6 +100,7 @@
 										<button type="submit" class="btn btn-warning">작성하기</button>
 										<a href="/admin/board/list" class="btn btn-primary">전체목록</a>
 									</div>
+								</div>
 								</form>
 							</div>
 
