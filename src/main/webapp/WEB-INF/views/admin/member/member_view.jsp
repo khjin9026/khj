@@ -72,9 +72,9 @@
 										<div>
 											<hr>
 										</div>
-										<a href="/admin/member/update?user_id=${memberVO.user_id}" class="btn btn-warning">업데이트</a>
+										<a href="/admin/member/update?user_id=${memberVO.user_id}&page=${pageVO.page}" class="btn btn-warning">업데이트</a>
 										<button type="submit" class="btn btn-danger">삭제</button>
-										<a href="/admin/member/list" class="btn btn-primary">전체목록</a>
+										<a href="/admin/member/list?page=${pageVO.page}" class="btn btn-primary">전체목록</a>
 									</div>
 									<!-- box-footer 엔드 -->
 								<input type="hidden" name="user_id" value="${memberVO.user_id}">

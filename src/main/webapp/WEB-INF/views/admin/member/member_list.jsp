@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>    
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>      
 <%@ include file="../include/header.jsp"%>
 
 <!-- Content Wrapper. Contains page content -->
@@ -41,20 +42,19 @@
 								</div>
 								<div class="card-body">
 
-									<!-- SEARCH FORM -->
-									<form class="form-inline ml-3">
-										<select class="form-control">
-											<option>---</option>
+								<!-- SEARCH FORM -->
+								<form action="/admin/member/list" class="form-inline ml-3">
+										<select name="searchType" class="form-control">
+											<option value="all">전체</option>
 											<option>option 2</option>
 											<option>option 3</option>
 											<option>option 4</option>
 											<option>option 5</option>
 										</select>
-										<input type="text" class="form-control" placeholder="">
-										<button type="button" style="border-color: #9F9E9B;"
-											class="btn btn-light">검색</button>
-										<button type="button" style="border-color: #9F9E9B;"
-											class="btn btn-light">새사용자등록</button>
+										<input type="text" name="searchKeyword" class="form-control" placeholder="">
+										<div class="button">
+											<button class="btn btn-light" style="border-color: #dce0e4;">검색</button>
+											</div>
 									</form>
 
 								</div>
@@ -83,10 +83,12 @@
 													<c:forEach items="${memberList}" var="memberVO" varStatus="status">										
 													<tr>
 														<td>${memberVO.user_id}</td>
-														<td><a href="/admin/member/view?user_id=${memberVO.user_id}">${memberVO.user_name}</a></td>
+														<td><a href="/admin/member/view?user_id=${memberVO.user_id}&page=${pageVO.page}">${memberVO.user_name}[${memberVO.point}]</a></td>
 														<td>${memberVO.email}</td>
 														<td><span class="tag tag-success">${memberVO.enabled}</span></td>
-														<td>${memberVO.reg_date}</td>
+														<td><span class="tag tag-success">
+														<fmt:formatDate pattern="yyyy-MM-dd HH:mm" value="${memberVO.reg_date}"/>
+														</span></td>
 														<td><span class="right badge badge-danger">${memberVO.levels}</span></td>
 													</tr> 
 													</c:forEach>
@@ -94,13 +96,23 @@
 											</table>
 											<div class="card-footer clearfix">
 												<a href="/admin/member/write" class="btn btn-outline-primary">CREATE</a>
+												
 												<ul class="pagination pagination-sm m-0 float-right">
-													<li class="page-item"><a class="page-link" href="#">&laquo;</a></li>
-													<li class="page-item"><a class="page-link" href="#">1</a></li>
-													<li class="page-item"><a class="page-link" href="#">2</a></li>
-													<li class="page-item"><a class="page-link" href="#">3</a></li>
-													<li class="page-item"><a class="page-link" href="#">&raquo;</a></li>
+												<c:if test="${pageVO.prev}">
+												<li class="page-item">
+													<a class="page-link" href="/admin/member/list?page=${pageVO.startPage-1}&searchType=${pageVO.searchType}&searchKeyword=${pageVO.searchKeyword}">이전</a>
+												</li>
+												</c:if>
+												<c:forEach begin="${pageVO.startPage}" end="${pageVO.endPage}" var="idx">
+													<li class="page-item <c:out value="${idx == pageVO.page?'active':''}"/>"><a href="/admin/member/list?page=${idx}&searchType=${pageVO.searchType}&searchKeyword=${pageVO.searchKeyword}" class="page-link">${idx}</a></li>
+												</c:forEach>
+												<c:if test="${pageVO.next}">
+												<li class="page-item">
+													<a class="page-link" href="/admin/member/list?page=${pageVO.endPage+1}&searchType=${pageVO.searchType}&searchKeyword=${pageVO.searchKeyword}">다음</a>
+												</li>
+												</c:if>
 												</ul>
+											
 											</div>
 										</div>
 										<!-- /.card-body -->

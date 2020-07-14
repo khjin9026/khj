@@ -6,6 +6,7 @@ import javax.inject.Inject;
 
 import org.apache.ibatis.session.SqlSession;
 import org.edu.vo.MemberVO;
+import org.edu.vo.PageVO;
 import org.springframework.stereotype.Repository;
 
 //implements -> extends와 비슷하지만 IF와 매칭시킬 때 사용
@@ -24,8 +25,8 @@ public class MemberDAOImpl implements IF_MemberDAO {
 	// .insert(앞 -> 쿼리문, 뒤 -> 매개변수);
 
 	@Override
-	public List<MemberVO> selectMember() throws Exception {
-		return sqlSession.selectList(mapperQuery + ".selectMember");
+	public List<MemberVO> selectMember(PageVO pageVO) throws Exception {
+		return sqlSession.selectList(mapperQuery + ".selectMember", pageVO);
 	}
 
 	@Override
@@ -42,6 +43,11 @@ public class MemberDAOImpl implements IF_MemberDAO {
 	@Override
 	public MemberVO viewMember(String user_id) throws Exception {
 		return sqlSession.selectOne(mapperQuery + ".viewMember", user_id);
+	}
+
+	@Override
+	public int countUserId(PageVO pageVO) throws Exception {
+		return sqlSession.selectOne(mapperQuery + ".countUserId", pageVO);
 	}
 
 }

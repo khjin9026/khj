@@ -42,7 +42,7 @@
 								</div>
 								<div class="card-body">
 
-									<!-- SEARCH FORM -->
+								<!-- SEARCH FORM -->
 								<form action="/admin/board/list" class="form-inline ml-3">
 										<select name="searchType" class="form-control">
 											<option value="all">전체</option>

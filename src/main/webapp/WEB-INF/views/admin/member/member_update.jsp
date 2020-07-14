@@ -48,9 +48,9 @@
 							<div class="col-sm-12">
 								<!-- text input -->
 								<div class="form-group">
-									<label>user_pw</label> <input value="${memberVO.user_pw}"
+									<label>user_pw</label> <input value=""
 										name="user_pw" type="text" class="form-control"
-										placeholder="Enter user_pw">
+										placeholder="${memberVO.user_pw}">
 								</div>
 							</div>
 
@@ -100,10 +100,11 @@
 								<br>
 								<div class="buttons">
 									<button type="submit" class="btn btn-warning">Submit</button>
-									<a href="/admin/member/list" class="btn btn-primary">LIST ALL</a>
+									<a href="/admin/member/list?page=${pageVO.page}" class="btn btn-primary">LIST ALL</a>
 								</div>
 							</div>
 						</div>
+						<input type="hidden" name="page" value="${pageVO.page}"/>
 					</form>
 				</div>
 				<!-- /.content-header -->
