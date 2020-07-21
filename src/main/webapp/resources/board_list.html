@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="x-ua-compatible" content="ie=edge">
 
+
 <title>AdminLTE 3 | 관리자 화면</title>
 
 <!-- Font Awesome Icons -->
@@ -233,7 +234,7 @@
 												</tbody>
 											</table>
 											<div class="card-footer clearfix">
-											<button type="button" class="btn btn-outline-primary">Creat</button>
+											<button type="button" class="btn btn-outline-primary">Create</button>
 												<ul class="pagination pagination-sm m-0 float-right">
 													<li class="page-item"><a class="page-link" href="#">&laquo;</a></li>
 													<li class="page-item"><a class="page-link" href="#">1</a></li>
@@ -262,7 +263,7 @@
 		</div>
 		<!-- /.content-wrapper -->
 	
-
+	
 	<!-- Control Sidebar -->
 	<aside class="control-sidebar control-sidebar-dark">
 		<!-- Control sidebar content goes here -->
@@ -290,9 +291,40 @@
 
 	<!-- jQuery -->
 	<script src="plugins/jquery/jquery.min.js"></script>
+	
 	<!-- Bootstrap 4 -->
 	<script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
 	<!-- AdminLTE App -->
 	<script src="dist/js/adminlte.min.js"></script>
+	
+	<script>
+	//===고전적 자바스크립트
+	function myFunc() { //형식 -> function 함수이름() { }
+		alert('테스트');
+	}
+	myFunc(); //함수호출(콜) == 실행
+	
+	//===JQuery 자바스크립트
+	$(document).ready(function(){//함수명 없이 실행 == 콜백함수.
+	alert('테스트2');
+	//even - 짝수 , odd - 홀수
+	$(".even_table tbody tr:even").css({"background-color":"black","color":"white"});
+	var cnt = 131;
+	$(".btn-primary").bind("click",function(event){
+		$(".even_table tbody tr").each(function(index, item){
+			$(item).addClass("kim_" + index); //class="hong_0", "hong_1"
+		})
+		//$("<tr><td>"+cnt+"</td><td>한줄추가</td><td>내용추가</td><td>2020.07.15</td><td>100</td></tr>").prependTo("table");
+		//cnt = cnt + 1;
+	});
+	//$("table thead tr").css({"background-color":"red"});
+	//$("#searchType").css({"width":"150px"});//제이쿼리 JS
+	//document.getElementById("searchType").style.width="200px";//오리지널 JS
+	//$(".btn-primary").css({"background-color":"red"});
+	//$("tr").css("background-color","red");
+	//$("tr").css({"background-color":"red","color":"blue"});
+});
+	</script>
+	
 </body>
 </html>

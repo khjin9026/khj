@@ -51,13 +51,12 @@ public class BoardDAOImpl implements IF_BoardDAO {
 
 	@Override
 	public List<String> selectAttach(Integer bno) throws Exception {
-		return sqlSession.selectList(mapperQuery + ".selectAttach", bno); 
+		return sqlSession.selectList(mapperQuery + ".selectAttach", bno);
 	}
 
 	@Override
 	public void deleteAttach(Integer bno) throws Exception {
 		sqlSession.delete(mapperQuery + ".deleteAttach", bno);
-		
 	}
 
 	@Override
@@ -73,4 +72,10 @@ public class BoardDAOImpl implements IF_BoardDAO {
 		return sqlSession.selectOne(mapperQuery + ".countBno", pageVO);
 	}
 
+	@Override
+	public void updateViewCount(Integer bno) throws Exception {
+		sqlSession.update(mapperQuery + ".updateViewCount", bno);
+	}
+
+	
 }

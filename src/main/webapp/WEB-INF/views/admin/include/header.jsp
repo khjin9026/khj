@@ -24,6 +24,9 @@ if('${msg}' !== ""){
 	}
 </script>
 
+<!-- jQuery -->
+<script src="/resources/plugins/jquery/jquery.min.js"></script>
+
 </head>
 
 <body class="hold-transition sidebar-mini">
