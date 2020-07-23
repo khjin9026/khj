@@ -12,22 +12,22 @@
                     <li class="imglist0">
                         <div class="roll_content">
                             <a href="/resources/home/javascript:;">
-                            <img src="/resources/home/img/img_slidecontents01.png" alt="OOOO OOOOO OOOO OOOOO, 스프링... OOOO OOOOO?"></a>
-                            <p class="roll_txtline">OOOO OOOOOOOOO OOOOOOOOO OOOOO</p>
+                            <img src="/resources/home/img/back1.png" alt="OOOO OOOOO OOOO OOOOO, 스프링... OOOO OOOOO?" style=""></a>
+                            <p class="roll_txtline"></p>
                         </div>
                     </li>
                     <li class="imglist1">
                         <div class="roll_content">
                             <a href="/resources/home/javascript:;">
-                            <img src="/resources/home/img/img_slidecontents02.png" alt="OOOO OOOOOOOOO OOOOO 스프링정보, 스프링... OOOO OOOOO?"></a>
-                            <p class="roll_txtline">OOOO OOOOOOOOO OOOOOOOOO OOOOO</p>
+                            <img src="/resources/home/img/back2.jpg" alt="OOOO OOOOOOOOO OOOOO 스프링정보, 스프링... OOOO OOOOO?"></a>
+                            <p class="roll_txtline"></p>
                         </div>
                     </li>
                     <li class="imglist2">
                         <div class="roll_content">
                             <a href="/resources/home/javascript:;">
-                            <img src="/resources/home/img/img_slidecontents03.png" alt="OOOO OOOOO 믿을 수 있는 스프링정보, 스프링... OOOO OOOOO?"></a>
-                            <p class="roll_txtline">OOOO OOOOOOOOO OOOOOOOOO OOOOO</p>
+                            <img src="/resources/home/img/back3.jpg" alt="OOOO OOOOO 믿을 수 있는 스프링정보, 스프링... OOOO OOOOO?"></a>
+                            <p class="roll_txtline"></p>
                         </div>
                     </li>
                 </ul>
@@ -67,7 +67,7 @@
 	
 		<!-- about_area -->
 		<div class="about_area">
-			<h2>OOOO OOOOO 스프링 <b>TOP 3</b></h2>
+			<h2>로컬PC 이미지 <b>TOP 3</b></h2>
 			<div class="about_box">
 				<ul class="place_list box_inner clear">
 					<c:forEach items="${boardList}" var="boardVO" varStatus="status">
