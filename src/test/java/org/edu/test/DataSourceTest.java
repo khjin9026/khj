@@ -53,13 +53,13 @@ public class DataSourceTest {
 	@Test
 	public void testInsertMember() throws Exception {
 		MemberVO memberVO = new MemberVO();
-		memberVO.setUser_id("kimilguk");
+		memberVO.setUser_id("kimhyejin");
 		memberVO.setUser_pw("1234");
-		memberVO.setUser_name("김일국");
-		memberVO.setEmail("kimilguk@test.com");
+		memberVO.setUser_name("김혜진");
+		memberVO.setEmail("khj@test.com");
 		memberVO.setPoint(100);
 		memberVO.setEnabled(true);
-		memberVO.setLevels("ROLE_USER");
+		memberVO.setLevels("ROLE_USER"); //스프링 시큐리티와 연동
 		memberService.insertMember(memberVO);
 	}
 	

@@ -12,7 +12,7 @@
                     <li class="imglist0">
                         <div class="roll_content">
                             <a href="/resources/home/javascript:;">
-                            <img src="/resources/home/img/back1.png" alt="OOOO OOOOO OOOO OOOOO, 스프링... OOOO OOOOO?" style=""></a>
+                            <img src="/resources/home/img/back1.jpg" alt="OOOO OOOOO OOOO OOOOO, 스프링... OOOO OOOOO?" style=""></a>
                             <p class="roll_txtline"></p>
                         </div>
                     </li>
@@ -49,13 +49,13 @@
             <div class="swiper-container">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
-                        <a href="/resources/home/javascript:;"><img src="/resources/home/img/mainslide_mob01.jpg" alt="OOOO OOOOO 믿을 수 있는 스프링정보, 스프링... OOOO OOOOO?" /></a>
+                        <a href="/resources/home/javascript:;"><img src="/resources/home/img/mback1.jpg" alt="OOOO OOOOO 믿을 수 있는 스프링정보, 스프링... OOOO OOOOO?" /></a>
                     </div>
                     <div class="swiper-slide">
-                        <a href="/resources/home/javascript:;"><img src="/resources/home/img/mainslide_mob02.jpg" alt="OOOO OOOOO 믿을 수 있는 스프링정보, 스프링... OOOO OOOOO?" /></a>
+                        <a href="/resources/home/javascript:;"><img src="/resources/home/img/mback2.jpg" alt="OOOO OOOOO 믿을 수 있는 스프링정보, 스프링... OOOO OOOOO?" /></a>
                     </div>
                     <div class="swiper-slide">
-                        <a href="/resources/home/javascript:;"><img src="/resources/home/img/mainslide_mob03.jpg" alt="OOOO OOOOO 믿을 수 있는 스프링정보, 스프링... OOOO OOOOO?" /></a>
+                        <a href="/resources/home/javascript:;"><img src="/resources/home/img/mback3.jpg" alt="OOOO OOOOO 믿을 수 있는 스프링정보, 스프링... OOOO OOOOO?" /></a>
                     </div>
                 </div>						
                 <div class="swiper-pagination"></div>

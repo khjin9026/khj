@@ -20,7 +20,7 @@ import org.springframework.web.multipart.MultipartFile;
 @Controller
 public class FileDataUtil {
 	private ArrayList<String> extNameArray = new ArrayList<String>() {
-		{
+		{ //첨부 가능한 확장자 추가
 			add("gif");
 			add("jpg");
 			add("png");
@@ -60,7 +60,7 @@ public class FileDataUtil {
 		//첨부 파일 해서 넣을때
 		String originalName = file.getOriginalFilename(); //jsp에서 전송받은 파일의 이름 가져오기
 		UUID uid = UUID.randomUUID(); //랜덤문자 구하기
-		String saveName = uid.toString() + "." + originalName.split("\\.")[1]; //한글파일명 처리
+		String saveName = uid.toString() + "." + originalName.split("\\.")[1]; //한글파일명 처리 //받아온 파일명과 확장자를 .을 기준으로 분리해서 이름만 빼줌
 		String[] files = new String[] {saveName}; //형변환 //boardVO에 파일명을 배열로 해놨기 때문. 같이 배열로 해줘야 get-set이 됨
 		byte[] fileData = file.getBytes();
 		File target = new File(uploadPath, saveName);

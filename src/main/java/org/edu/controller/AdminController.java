@@ -68,7 +68,7 @@ public class AdminController {
 		if(pageVO.getPage() == null) { 
 			pageVO.setPage(1); //초기 page변수값 지정
 		}
-		pageVO.setPerPageNum(10); //1페이 당 보여줄 게시물 수 (강제지정)
+		pageVO.setPerPageNum(10); //1페이지 당 보여줄 게시물 수 (강제지정)
 		pageVO.setTotalCount(boardService.countBno(pageVO)); //강제로 입력한 값을 쿼리로 대체ok
 		List<BoardVO> list = boardService.selectBoard(pageVO);
 		//모델클래스로 jsp화면에 boardService에서 셀렉트한 list값을 boardList변수명으로 보냄
@@ -77,6 +77,8 @@ public class AdminController {
 		model.addAttribute("pageVO", pageVO);
 		return "admin/board/board_list"; //(.jsp)가 생략된 것
 	}
+	
+	
 	/**
 	 * 게시물관리 상세보기 입니다.
 	 * @throws Exception 
@@ -110,14 +112,14 @@ public class AdminController {
 		
 		return "admin/board/board_write";
 	}
-	//post용 -> 실제 값을...보여줌..?
+	//post용
 	@RequestMapping(value = "/admin/board/write", method = RequestMethod.POST)
 	public String boardWrite(MultipartFile file, @Valid BoardVO boardVO,Locale locale, RedirectAttributes rdat) throws Exception {
 	
 		if(file.getOriginalFilename() == "") {
 			//첨부파일 없이 첫 등록 할 때
 			boardService.insertBoard(boardVO);
-		} else {
+		} else { //첨부파일 포함해서 등록할 때
 			String[] files = fileDataUtil.fileUpload(file);
 			boardVO.setFiles(files);
 			boardService.insertBoard(boardVO);
