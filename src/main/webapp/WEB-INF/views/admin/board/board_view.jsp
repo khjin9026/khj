@@ -59,9 +59,7 @@
 													<div class="form-group">
 														<label>Content</label>
 														<br>
-														<textarea name="content" class="form-control" rows="3"
-													placeholder="내용 입력" disabled>${boardVO.content}</textarea>
-														
+														${boardVO.content}
 													</div>
 												</div>
 												<div class="col-sm-12">

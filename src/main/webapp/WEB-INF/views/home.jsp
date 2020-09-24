@@ -12,21 +12,21 @@
                     <li class="imglist0">
                         <div class="roll_content">
                             <a href="/resources/home/javascript:;">
-                            <img src="/resources/home/img/back1.jpg" alt="OOOO OOOOO OOOO OOOOO, 스프링... OOOO OOOOO?" style=""></a>
+                            <img src="/resources/home/img/lalaroll1.png" style="width:100%; height:550px;" alt="OOOO OOOOO OOOO OOOOO, 스프링... OOOO OOOOO?"></a>
                             <p class="roll_txtline"></p>
                         </div>
                     </li>
                     <li class="imglist1">
                         <div class="roll_content">
                             <a href="/resources/home/javascript:;">
-                            <img src="/resources/home/img/back2.jpg" alt="OOOO OOOOOOOOO OOOOO 스프링정보, 스프링... OOOO OOOOO?"></a>
+                            <img src="/resources/home/img/lalaroll2.png" style="width:100%; height:550px; alt="OOOO OOOOOOOOO OOOOO 스프링정보, 스프링... OOOO OOOOO?"></a>
                             <p class="roll_txtline"></p>
                         </div>
                     </li>
                     <li class="imglist2">
                         <div class="roll_content">
                             <a href="/resources/home/javascript:;">
-                            <img src="/resources/home/img/back3.jpg" alt="OOOO OOOOO 믿을 수 있는 스프링정보, 스프링... OOOO OOOOO?"></a>
+                            <img src="/resources/home/img/lalaroll3.png" style="width:100%; height:550px; alt="OOOO OOOOO 믿을 수 있는 스프링정보, 스프링... OOOO OOOOO?"></a>
                             <p class="roll_txtline"></p>
                         </div>
                     </li>
@@ -67,12 +67,12 @@
 	
 		<!-- about_area -->
 		<div class="about_area">
-			<h2>로컬PC 이미지 <b>TOP 3</b></h2>
+			<h2><b>LA LA LAND SoundTrack</b></h2>
 			<div class="about_box">
 				<ul class="place_list box_inner clear">
 					<c:forEach items="${boardList}" var="boardVO" varStatus="status">
 						<c:if test="${status.count <= 3}">
-					<li><a href="/board/view?bno=${boardVO.bno}">
+					<li style="overflow:hidden"><a href="/board/view?bno=${boardVO.bno}">
 							<!-- 첨부파일이 있을 때 -->
 							<c:if test="${boardVO.files[0] != null }">
 								<c:set var="extName" value="${fn:split(boardVO.files[0],'.')}" />
@@ -91,11 +91,11 @@
 							
 							<!-- 첨부파일이 없을 때 -->
 							<c:if test="${boardVO.files[0] == null }">
-								<img class="img_topplace" src="/resources/home/img/img_topplace01.jpg" alt="이미지 없음" />
+								<img class="img_topplace" src="/resources/home/img/no.png" alt="이미지 없음" />
 							</c:if>
 							 
 							<h3>${boardVO.title}</h3>
-							<p class="txt">${boardVO.content}</p>
+							<p class="txt"><c:out value="${boardVO.content}" escapeXml="false"/></p>
 							<span class="view">VIEW</span></a>
 					</li>
 					</c:if>

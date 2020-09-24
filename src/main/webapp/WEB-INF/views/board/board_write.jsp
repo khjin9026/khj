@@ -3,7 +3,8 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>    
 <%@ include file="../include/header.jsp" %>
-
+<script src="<c:url value='/resources/plugins/ckeditor/ckeditor.js'/>">
+</script>
 	<!-- container -->
 	<div id="container">
 		<!-- location_area -->
@@ -32,7 +33,7 @@
 						</li>
 						<li class="clear">
 							<label for="content_lbl" class="tit_lbl pilsoo_item">내용</label>
-							<div class="app_content"><textarea name="content" id="content_lbl" class="w100p" placeholder="간단한 상담 요청 사항을 남겨주시면 보다 상세한 상담이 가능합니다.
+							<div class="app_content"><textarea name="content" id="content_lbl" class="w100p ckeditor" placeholder="간단한 상담 요청 사항을 남겨주시면 보다 상세한 상담이 가능합니다.
 전화 상담 희망시 기재 부탁드립니다." required></textarea></div>
 						</li>
 						<li class="clear">

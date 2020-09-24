@@ -15,9 +15,7 @@ public class OpenApi {
 	//외부연계 매서드
 	public static void serviceApi() {
 		BufferedReader br = null; //HRD넷에서 전송받은 데이터를 일시저장하는 저수지역할
-		String urlstr = "http://www.hrd.go.kr/jsp/HRDP/HRDPO00/HRDPOA60/HRDPOA60_1.jsp?returnType=XML"
-						+ "&authKey=인증키부분&pageNum=1&pageSize=10"
-						+ "&srchTraStDt=20200501&srchTraEndDt=20201231&outType=1&sort=DESC&sortCol=TR_STT_DT&srchTraArea1=44";
+		String urlstr = "http://www.hrd.go.kr/jsp/HRDP/HRDPO00/HRDPOA60/HRDPOA60_1.jsp?returnType=XML&authKey=GVVTLLuWeJNPOTNACeVyGx4Wa9qpbw6n&pageNum=1&pageSize=10&srchTraStDt=20200903&srchTraEndDt=20201203&outType=1&sort=ASC&sortCol=TR_STT_DT";
 		                //링크를 보기 편하게 하기위해 분리
 		try {
 			URL url= new URL(urlstr);

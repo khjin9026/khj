@@ -2,7 +2,8 @@
 	pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ include file="../include/header.jsp"%>
-
+<script src="<c:url value='/resources/plugins/ckeditor/ckeditor.js'/>">
+</script>
 <!-- Content Wrapper. Contains page content -->
 <div class="content-wrapper">
 	<!-- Content Header (Page header) -->
@@ -59,7 +60,7 @@
 											<!-- textarea -->
 											<div class="form-group">
 												<label>Content</label>
-												<textarea name="content" class="form-control" rows="3"
+												<textarea name="content" class="form-control ckeditor" rows="3"
 													placeholder="내용 입력">${boardVO.content}</textarea>
 											</div>
 										</div>

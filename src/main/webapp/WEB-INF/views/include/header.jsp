@@ -21,7 +21,7 @@
 <![endif]-->
 <script>
 if('${msg}' != ""){
-	alert("${msg}에 성공하였습니다.!");
+	alert("${msg}에 성공하였습니다!");
 }
 </script>
 </head>
@@ -42,7 +42,7 @@ if('${msg}' != ""){
 				<!-- when은 choose문에서만 사용 가능 // 인증체크 -->
 				<c:choose>   
 					<c:when test="${session_enabled eq 'true' }">
-						<li><span style="color:white">${session_username}님[${session_userid}] 환영합니다.!</span>
+						<li><span style="color:white">${session_username}님[${session_userid}] 환영합니다.</span>
 						</li>
 						<li><a href="/logout">로그아웃</a>
 						</li>
